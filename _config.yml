@@ -24,14 +24,14 @@ title: GameDev Tales
 #subtitle: "Version 1.0"
 email: ssahmed@usc.edu
 
-#logo: "/assets/images/bio-photo.jpg"
-#masthead_title: "USC Student"
+logo: "/assets/images/bio-photo.jpg"
+masthead_title: "USC Student"
 
 author:
   name     : "Sheehan Ahmed"
   avatar   : "/assets/images/bio-photo.jpg"
   bio      : "C#/C++ programmer"
-  location : "Portland, Oregon & Los Angeles, California"
+  location : "Los Angeles, California"
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
