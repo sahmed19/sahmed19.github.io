@@ -8,8 +8,35 @@ categories: blog
 I started game development when I was around ten or so using Clickteam Fusion to make simple platformers. After I learned to code, I started using Unity, and have been a pretty loyal Unity dev ever since. All I've ever really known is coding within Unity's paradigm of GameObjects and C# and whatnot. I figured it was time to try something new.
 
 ### What to pick?
-I wanted to use a new engine 
+I wanted to use a lower-key framework, something that leaves most of the game loop to me, both as a learning opportunity and a way to try out constructing the "engine" from the ground up to suit my specific needs.
+
+I ended up settling with Monogame, as coming from Unity I'm most used to C# anyway. Monogame (prev. XNA) is very battle-tested: several high-profile indie games use it, like [*Celeste*](http://www.celestegame.com/) by [Extremely Ok Games](https://exok.com/games.html), [*Terraria*](https://terraria.org/) by [Re-Logic](https://re-logic.com/) and [*Stardew Valley*](https://www.stardewvalley.net/) by [Eric Barone](https://twitter.com/ConcernedApe).
+
+*Other choices I researched and did not go with, but you might!*
+- Godot: Although I appreciate how much more it stays 'out of your way' than other engines, it still feels too much for my current wants.
+- Bevy: Very young, but I am definitely keeping an eye on this one.
+- SDL2/C++: I use C++ all the time at school anyway so wanted to do something else when I'm coding for fun.
+
+### First date with Monogame, a little nervous
+It seems like a pattern I have for any new engine/framework is... **try to make Cave Story with it**. It was the first thing I tried to do with Clickteam Fusion, Unity, and now Monogame.
+
+![MyFirstMonoScreenshot](/assets/images/posts/01_myFirstMonoScreenshot.png)
+
+Getting Quote on the screen with relatively basic platformer controls is at this point my personal *Hello World*. I have to admit, I was intimidated at first by having no software to go off other than good old VSCode, but after this point most of my anxieties disappeared. I love the freedom of having the framework give me absolutely nothing but an entry point, a Tick, and a Draw.
+
+I was about to type out a familiar Actor.cs class... when the freedom really went to my head. After all, I've been doing the tradition my whole life. While everyone else was going out and partying and hating OOP last year, I had to stay inside with my GameObjects and MonoBehaviours. It's not a phase, Mom!
+
+## In my ECS Era
+
+I watched [that one Overwatch GDC Talk that everyone mentions about ECS](https://youtu.be/zrIY0eIyqmI) and was immediately sold. One of my absolute favorite aspects of game design is **consistent systems.** I love when every actor in a game, from the player to enemies to even random little objects, have to obey the same rules of the universe. 
+
+These personal core values of game design is basically a match made in heaven with ECS, a programming paradigm based on "declarations (there shall be this)" instead of "imperative statements (do this)" ([Martens](https://ajmmertens.medium.com/why-vanilla-ecs-is-not-enough-d7ed4e3bebe5)). To use an example from *Breath of the Wild*: I want to tell my game that fire catches on wood and **let that work no matter the circumstance of fire catching wood**, whether I am lighting an arrowhead on a bonfire or hurling magic fireballs at an enemy Bokoblin's wooden shield.
+
+#### What framework to pick?
+
+The two really popular ECS frameworks available online are EnTT and Flecs
 
 
 
-![Screenshot](/assets/images/posts/pochita_test.png)
+
+![Pochita](/assets/images/posts/pochita_test.png)
