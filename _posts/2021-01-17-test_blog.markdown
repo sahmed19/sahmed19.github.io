@@ -1,14 +1,15 @@
 ---
 layout: single
-title:  "Test blog"
+title:  "Starting out in Monogame"
 date:   2022-08-17 10:35:00 +0800
 categories: blog
 ---
-## Test Blog
-Using this site to make a blog.
-- coding in Unity
-- coding in Monogame
-- coding in Unreal
-- 3D art
+## Leaving the Unity birdnest
+I started game development when I was around ten or so using Clickteam Fusion to make simple platformers. After I learned to code, I started using Unity, and have been a pretty loyal Unity dev ever since. All I've ever really known is coding within Unity's paradigm of GameObjects and C# and whatnot. I figured it was time to try something new.
+
+### What to pick?
+I wanted to use a new engine 
+
+
 
 ![Screenshot](/assets/images/posts/pochita_test.png)
