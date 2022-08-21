@@ -72,7 +72,7 @@ public static void ApplyVelocityToPosition(Iterator it)
 
     for(int i = 0; i < it.Count; i++)           // Loop thru every entity in the game
     {
-        ref var pos = ref posIter[i];           // Position component MUSt be mutated so use 'ref' keyword
+        ref var pos = ref posIter[i];           // Position component MUST be mutated so use 'ref' keyword
         var vel = velIter[i];                   // Velocity component is simply being read.
 
         pos.Position += vel.Velocity * deltaTime; //Add velocity*dt to position
@@ -94,7 +94,7 @@ The 4 total systems are: ApplyVelocityToPosition, BounceOffWall, RotateTowardVel
 
 ### Visualizing ECS data with Dear IMGUI
 
-With ECS as data-driven as it is, I would like to have a way to visualize all of my entities with their components. I decided to start with a simple approach that could grow to be more complex later. For my visualization I went with the [.NET Wrapper](https://github.com/mellinoe/ImGui.NET) for Dear IMGUI. [(This tutorial)](https://flatredball.com/news/dear-imgui-integration/) was really helpful to figure out how to do this.
+With ECS as data-driven as it is, I would like to have a way to visualize all of my entities with their components. I decided to start with a simple approach that could grow to be more complex later. For my visualization I went with the [.NET Wrapper](https://github.com/mellinoe/ImGui.NET) for Dear IMGUI. [This tutorial from FlatRedBall](https://flatredball.com/news/dear-imgui-integration/) was really helpful to figure out how to do this.
 
 
 ![Dear IMGUI Integration](/assets/images/posts/01_dear-imgui.png)
