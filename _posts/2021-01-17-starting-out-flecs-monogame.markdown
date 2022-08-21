@@ -38,6 +38,7 @@ These personal core values of game design is basically a match made in heaven wi
 
 For my project I decided to go with [a C# wrapper for Flecs](https://github.com/flecs-hub/flecs-cs).
 
+> NOTE: Original Flecs is written in C/C++. The wrapper adapts C source code to be usable by C# projects.
 
 ### Paradigm shift
 
@@ -45,27 +46,27 @@ ECS sounds very cool at first, but once you start trying to create components an
 
 ![Pochita](/assets/images/posts/01_pochita.png)
 
-One thing that I ended up changing was converting a `struct Transform` into `Position`, `Rotation`, and `Scale` structs. As per the Flecs manual, ECS is best when using as granular data-types as possible. This really allows systems to *only* bother the data that they need to, instead of having to manage potential side effects of entire OOP classes. I'm excited by the possibilities but recognize that this will take a lot of getting used to.
+The best way to start planning an ECS project is to boil down entities to as granular components as possible. My first hunch was that I would need a Transform component, but this is actually incorrect as per a [direct example from the Flecs manual.](https://flecs.docsforge.com/master/designing-with-flecs/#component-size) A Transform is already not granular enough, because it could be boiled down further into Position, Rotation, and Scale. This atomic way of thinking about data allows systems to *only* bother the data that they need to, instead of having to manage potential side effects of entire OOP classes. I'm excited by the possibilities but recognize that this will take a lot of getting used to.
 
-
-![Thousand Pochitas](/assets/images/posts/01_thousand-pochitas.png)
-
-This is a very basic ECS game that consists of 2500 entities, 5 components, and 4 systems.
-The 5 components are as follows: Position, Rotation, Scale, Velocity, and Sprite. They are kind of self-explanatory, especially since they literally do not contain anything other than their named value. Like, Position is just:
+For my Pochita game, I figured I would need the aforementioned Position, Rotation, and Scale components, as well as two more components: Velocity and Sprite. The components themselves are kind of self-explanatory, especially since they literally do not contain anything other than their named value. For example, Position is just:
 ```cs
 public struct C_Position : IComponent
 {
     public Vector2 Position;
 }
 ```
-That's literally it. It's very freeing that in terms of data, ECS is very "What you see is what you get" about things. Data is granular and gives you exactly what you expect, nothing less, nothing more.
+That's literally it. It's very freeing that in terms of data, ECS is very WYSIWYG (What you see is what you get) about things. Data is granular and gives you exactly what you expect. Nothing less, nothing more.
 
-Systems are defined as functions that can get subscribed into the Flecs ecosystem. Here is the system that applies velocity to position.
+My Sprite component ended up being more verbose, but mostly due to helper functions and some data I assume will never be used outside of the context of a sprite draw. If I need to refactor it into multiple components later, it should be easy enough to do so.
+
+> TIP: When using Flecs, REMEMBER that every component needs to be registered at the beginning of the program.
+
+Systems are defined as functions that can get subscribed into the Flecs ecosystem. They take an `Iterator` as a parameter and use their `Field<T>` function to generate several `Span<T>` that allow the developer to access specified components. Here is the system that applies velocity to position.
 
 ```cs
 public static void ApplyVelocityToPosition(Iterator it)
 {
-    float deltaTime = it.DeltaSystemTime();     // I contributed this helper function! :D
+    float deltaTime = it.DeltaSystemTime();     // Gather deltaTime. I contributed this method! :D
     
     var posIter = it.Field<C_Position>(1);      // Initialize iterator for position
     var velIter = it.Field<C_Velocity>(2);      // Initialize iterator for velocity
@@ -80,6 +81,8 @@ public static void ApplyVelocityToPosition(Iterator it)
 }
 ```
 
+As you can see, this loops through every entity to handle a system all at once. It's not difficult to imagine the possibilities for how this simplifies things. You have access to every other entity that a particular system concerns, right in the business-logic code for that system!
+
 Subscribing the function as a system to ECS looks like this:
 ```cs
 World.RegisterSystem(S_Physics.ApplyVelocityToPosition, EcsOnUpdate, $"{typeof(C_Position)}, {typeof(C_Velocity)}");
@@ -89,8 +92,10 @@ The `EcsOnUpdate` describes the phase this will participate in. the `$"{typeof(C
 
 This is pretty beautiful because this system will apply to any entity that has both a position and velocity without asking any other questions about them. Also, the data being structs means I have to explicitly state when variables are to be mutated or not, using the ref keyword.
 
-The 4 total systems are: ApplyVelocityToPosition, BounceOffWall, RotateTowardVelocityDirection, and PendSpritesForDraw. All of them were pretty straightforward to write, but if you would like to check them out they are available at [my project repo on Github.](https://github.com/sahmed19/ProjectMono).
 
+The 4 total systems are: ApplyVelocityToPosition, BounceOffWall, RotateTowardVelocityDirection, and PendSpritesForDraw. All of them were pretty straightforward to write.
+
+![Thousand Pochitas](/assets/images/posts/01_thousand-pochitas.png)
 
 ### Visualizing ECS data with Dear IMGUI
 
@@ -119,3 +124,4 @@ For the IMGUI visualizer, there are a couple next steps I have in mind.
 Thanks for reading! School starts in a couple days but I'll try to continue this side project as well as I can.
 
 Follow me [@wheatpenguin](https://twitter.com/wheatpenguin) on Twitter.
+Check out [this project repo on Github.](https://github.com/sahmed19/ProjectMono).
