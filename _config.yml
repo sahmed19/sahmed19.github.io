@@ -37,7 +37,7 @@ author:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/sahmed19"
     - label: "Twitter"
-      icon: "fa-twitter"
+#      icon: "fa fa-twitter"
       url: "https://twitter.com/wheatpenguin"
 
 
