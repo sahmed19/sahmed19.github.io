@@ -105,8 +105,7 @@ So far it's just a simple setup with an entity browser that allows the user to d
 
 The final result (for now) is 2500 Pochitas bouncing around a virtual box. I can move the camera around or change any of their positions/velocities as I wish.
 
-{% include youtube.html id='Y6BAVaV6WbU' %}
-
+{% include youtube.html id='Jxl7S-t2Azc' %}
 ### Next steps
 
 So far all I have used Flecs ECS for is a simple physics simulation. I'm sure trying to make a character-based platformer video game like *Cave Story* will have it's own set of challenges, like handling different kinds of queries, using tags and component relationships. I'll see how it goes and continue to publish my progress here.
