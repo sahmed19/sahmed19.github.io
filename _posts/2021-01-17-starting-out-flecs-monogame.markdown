@@ -13,9 +13,9 @@ To maximize the learning opportunity I wanted to use a lower-key framework, some
 I ended up settling with Monogame, as coming from Unity I'm most used to C# anyway. Monogame (prev. XNA) is very battle-tested: several high-profile indie games use it, like [*Celeste*](http://www.celestegame.com/) by [Extremely Ok Games](https://exok.com/games.html), [*Terraria*](https://terraria.org/) by [Re-Logic](https://re-logic.com/) and [*Stardew Valley*](https://www.stardewvalley.net/) by [Eric Barone](https://twitter.com/ConcernedApe).
 
 *Other choices I researched and did not go with, but you might!*
-- Godot: Although I appreciate how much more it stays 'out of your way' than other engines, it still feels too much for my current wants.
-- Bevy: Very young, but I am definitely keeping an eye on this one.
-- SDL2/C++: I use C++ all the time at school anyway so wanted to do something else when I'm coding for fun.
+- **Godot**: Although I appreciate how much more it stays 'out of your way' than other engines, it still feels too much for my current wants.
+- **Bevy**: Very young, but I am definitely keeping an eye on this one.
+- **SDL2/C++**: I use C++ all the time at school anyway so wanted to do something else when I'm coding for fun.
 
 ### First date with Monogame, a little nervous
 It seems like a pattern I have for any new engine/framework is... **try to make Cave Story with it**. It was the first thing I tried to do with Clickteam Fusion, Unity, and now Monogame.
@@ -106,6 +106,7 @@ So far it's just a simple setup with an entity browser that allows the user to d
 The final result (for now) is 2500 Pochitas bouncing around a virtual box. I can move the camera around or change any of their positions/velocities as I wish.
 
 {% include youtube.html id='Jxl7S-t2Azc' %}
+
 ### Next steps
 
 So far all I have used Flecs ECS for is a simple physics simulation. I'm sure trying to make a character-based platformer video game like *Cave Story* will have it's own set of challenges, like handling different kinds of queries, using tags and component relationships. I'll see how it goes and continue to publish my progress here.
