@@ -1,10 +1,10 @@
 ---
 layout: single
-title:  "Starting out in Monogame"
+title:  "Starting out with Flecs ECS in Monogame"
 date:   2022-08-17 10:35:00 +0800
 categories: blog
 ---
-## Leaving the Unity birdnest
+# Leaving the Unity birdnest
 I started game development when I was around ten or so using Clickteam Fusion to make simple platformers. After I learned to code, I started using Unity, and have been a pretty loyal Unity dev ever since. All I've ever really known is coding within Unity's paradigm of GameObjects and C# and whatnot. I figured it was time to try something new.
 
 ### What to pick?
@@ -24,9 +24,13 @@ It seems like a pattern I have for any new engine/framework is... **try to make 
 
 Getting Quote on the screen with relatively basic platformer controls is at this point my personal *Hello World*. I have to admit, I was intimidated at first by having no software to go off other than good old VSCode, but after this point most of my anxieties disappeared. I love the freedom of having the framework give me the bare essentials: an entry point, a `Tick()`, and a `Draw()`.
 
-I was about to type out a familiar Actor.cs class... when the freedom really went to my head. After all, I've been doing the tradition my whole life. While everyone else was going out and partying and hating OOP last year, I had to stay inside with my GameObjects and MonoBehaviours. It's not a phase, Mom!
+I was about to type out a familiar Actor.cs class... when the freedom really went to my head. After all, I've been doing the traditional pattern my whole life. While everyone else was going out and partying and hating OOP last year, I had to stay inside with my GameObjects and MonoBehaviours. It's not a phase, Mom!
 
-## In my ECS Era
+![FriendshipEnded](/assets/images/posts/01_friendship-ended-with-actor.png)
+
+Which brings us to...
+
+# In my ECS Era
 
 I watched [that one Overwatch GDC Talk that everyone mentions about ECS](https://youtu.be/zrIY0eIyqmI) and was immediately sold. One of my absolute favorite aspects of game design is **consistent systems.** I love when every actor in a game, from the player to enemies to even random little objects, have to obey the same rules of the universe. 
 
@@ -44,7 +48,7 @@ ECS sounds very cool at first, but once you start trying to create components an
 One thing that I ended up changing was converting a `struct Transform` into `Position`, `Rotation`, and `Scale` structs. As per the Flecs manual, ECS is best when using as granular data-types as possible. This really allows systems to *only* bother the data that they need to, instead of having to manage potential side effects of entire OOP classes. I'm excited by the possibilities but recognize that this will take a lot of getting used to.
 
 
-![MyFirstMonoScreenshot](/assets/images/posts/01_thousand-pochitas.png)
+![Thousand Pochitas](/assets/images/posts/01_thousand-pochitas.png)
 
 This is a very basic ECS game that consists of 2500 entities, 5 components, and 4 systems.
 The 5 components are as follows: Position, Rotation, Scale, Velocity, and Sprite. They are kind of self-explanatory, especially since they literally do not contain anything other than their named value. Like, Position is just:
@@ -88,3 +92,27 @@ This is pretty beautiful because this system will apply to any entity that has b
 The 4 total systems are: ApplyVelocityToPosition, BounceOffWall, RotateTowardVelocityDirection, and PendSpritesForDraw. All of them were pretty straightforward to write, but if you would like to check them out they are available at [my project repo on Github.](https://github.com/sahmed19/ProjectMono).
 
 
+### Visualizing ECS data with Dear IMGUI
+
+With ECS as data-driven as it is, I would like to have a way to visualize all of my entities with their components. I decided to start with a simple approach that could grow to be more complex later. For my visualization I went with the [.NET Wrapper](https://github.com/mellinoe/ImGui.NET) for Dear IMGUI. [(This tutorial)](https://flatredball.com/news/dear-imgui-integration/) was really helpful to figure out how to do this.
+
+
+![Dear IMGUI Integration](/assets/images/posts/01_dear-imgui.png)
+
+So far it's just a simple setup with an entity browser that allows the user to dynamically change values at runtime. It doesn't have any features for adding/removing components or entities as of now.
+
+# Conclusion
+
+The final result (for now) is 2500 Pochitas bouncing around a virtual box. I can move the camera around or change any of their positions/velocities as I wish.
+
+### Next steps
+
+So far all I have used Flecs ECS for is a simple physics simulation. I'm sure trying to make a character-based platformer video game like *Cave Story* will have it's own set of challenges, like handling different kinds of queries, using tags and component relationships. I'll see how it goes and continue to publish my progress here.
+
+For the IMGUI visualizer, there are a couple next steps I have in mind.
+- **Entity focuser**. A toggle that targets the camera at a specific entity's position.
+- **Entity browser filter by component.**
+- **Hierarchy based on Flecs relationships.**
+
+Thanks for reading!
+Follow me [@wheatpenguin](https://twitter.com/wheatpenguin) on Twitter.
