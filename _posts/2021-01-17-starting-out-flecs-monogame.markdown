@@ -114,7 +114,7 @@ The final result (for now) is 2500 Pochitas bouncing around a virtual box. I can
 
 ### Next steps
 
-So far all I have used Flecs ECS for is a simple physics simulation. I'm sure trying to make a character-based platformer video game like *Cave Story* will have it's own set of challenges, like handling different kinds of queries, using tags and component relationships. I'll see how it goes and continue to publish my progress here.
+So far all I have used Flecs ECS for is a simple physics simulation. I'm sure trying to make a character-based platformer video game like *Cave Story* will have its own set of challenges, like handling different kinds of queries, using tags and component relationships. I'll see how it goes and continue to publish my progress here.
 
 For the IMGUI visualizer, there are a couple next steps I have in mind.
 - **Entity focuser**. A toggle that targets the camera at a specific entity's position.
