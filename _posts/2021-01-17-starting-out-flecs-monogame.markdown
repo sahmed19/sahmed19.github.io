@@ -68,13 +68,13 @@ public static void ApplyVelocityToPosition(Iterator it)
 {
     float deltaTime = it.DeltaSystemTime();     // Gather deltaTime. I contributed this method! :D
     
-    var posIter = it.Field<C_Position>(1);      // Initialize iterator for position
-    var velIter = it.Field<C_Velocity>(2);      // Initialize iterator for velocity
+    var posIter = it.Field<C_Position>(1);      // Initialize span for position
+    var velIter = it.Field<C_Velocity>(2);      // Initialize span for velocity
 
     for(int i = 0; i < it.Count; i++)           // Loop thru every entity in the game
     {
         ref var pos = ref posIter[i];           // Position component MUST be mutated so use 'ref' keyword
-        var vel = velIter[i];                   // Velocity component is simply being read.
+        var vel = velIter[i];                   // Velocity component is simply being read
 
         pos.Position += vel.Velocity * deltaTime; //Add velocity*dt to position
     }
