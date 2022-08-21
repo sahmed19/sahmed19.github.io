@@ -93,7 +93,7 @@ The `EcsOnUpdate` describes the phase this will participate in. the `$"{typeof(C
 This is pretty beautiful because this system will apply to any entity that has both a position and velocity without asking any other questions about them. Also, the data being structs means I have to explicitly state when variables are to be mutated or not, using the ref keyword.
 
 
-The 4 total systems are: ApplyVelocityToPosition, BounceOffWall, RotateTowardVelocityDirection, and PendSpritesForDraw. All of them were pretty straightforward to write.
+The 4 total systems are: ApplyVelocityToPosition, BounceOffWall, RotateTowardVelocityDirection, and PendSpritesForDraw. All of them were pretty straightforward to write and do *exactly* what their name implies with zero side-effects. 
 
 ![Thousand Pochitas](/assets/images/posts/01_thousand-pochitas.png)
 
