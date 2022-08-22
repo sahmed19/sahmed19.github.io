@@ -34,12 +34,12 @@ Which brings us to...
 
 There are a lot of in-depth explanations for ECS online -- one of the best ones is an Overwatch GDC talk linked below -- so I'll try to distill the essence of it briefly in three main points.
 
-1. Your game consists of a list of **Entities**. These have no individual data/functionality but contain a list of **Components**.
-2. These **Components** are SIMPLY data-objects with zero functionality. Nothing more.
+* 1: Your game consists of a list of **Entities**. These have no individual data/functionality but contain a list of **Components**.
+* 2: These **Components** are SIMPLY data-objects with zero functionality. Nothing more.
 
 So far, this may sound familiar to Unity or Unreal users, but the *zero functionality* is a key difference. No mutations, no logic, nothing. Imagine if MonoBehaviours or ActorComponents were only allowed to have public variables. All of your functional code is instead delegated over to...
 
-3. Sets of **Systems** iterate over components that they care about and read/write accordingly.
+* 3: Sets of **Systems** iterate over components that they care about and read/write accordingly.
 
 This is the crux of ECS software design: complete separation between data and logic.
 
