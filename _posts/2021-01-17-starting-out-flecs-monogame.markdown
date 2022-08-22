@@ -13,8 +13,8 @@ To maximize the learning opportunity I wanted to use a lower-key framework, some
 I ended up settling with Monogame, as coming from Unity I'm most used to C# anyway. Monogame (prev. XNA) is very battle-tested: several high-profile indie games use it, like [*Celeste*](http://www.celestegame.com/) by [Extremely Ok Games](https://exok.com/games.html), [*Terraria*](https://terraria.org/) by [Re-Logic](https://re-logic.com/) and [*Stardew Valley*](https://www.stardewvalley.net/) by [Eric Barone](https://twitter.com/ConcernedApe).
 
 *Other choices I researched and did not go with, but you might!*
-- **Godot**: Although I appreciate how much more it stays 'out of your way' than other engines, it still feels too much for my current wants.
-- **Bevy**: Very young, but I am definitely keeping an eye on this one.
+- **Godot**: Although I appreciate how much more it stays "out of your way" than other engines, it still feels too much for my current wants.
+- **Bevy**: Young but I am keeping an eye on this one!
 - **SDL2/C++**: I use C++ all the time at school anyway so wanted to do something else when I'm coding for fun.
 
 ### First date with Monogame, a little nervous
@@ -32,6 +32,19 @@ Which brings us to...
 
 # In my ECS Era
 
+There are a lot of in-depth explanations for ECS online -- one of the best ones is an Overwatch GDC talk linked below -- so I'll try to distill the essence of it briefly in three main points.
+
+1. Your game consists of a list of **Entities**. These have no individual data/functionality but contain a list of **Components**.
+2. These **Components** are SIMPLY data-objects with zero functionality. Nothing more.
+
+So far, this may sound familiar to Unity or Unreal users, but the *zero functionality* is a key difference. No mutations, no logic, nothing. Imagine if MonoBehaviours or ActorComponents were only allowed to have public variables. All of your functional code is instead delegated over to...
+
+3. Sets of **Systems** iterate over components that they care about and read/write accordingly.
+
+This is the crux of ECS software design: complete separation between data and logic.
+
+### What ECS is good for
+
 I watched [that one Overwatch GDC Talk that everyone mentions about ECS](https://youtu.be/zrIY0eIyqmI) and was immediately sold. One of my absolute favorite aspects of game design is **consistent systems.** I love when every actor in a game, from the player to enemies to even random little objects, have to obey the same rules of the universe. 
 
 These personal core values of game design is basically a match made in heaven with ECS, a programming paradigm based on "declarations (there shall be this)" instead of "imperative statements (do this)" ([Martens](https://ajmmertens.medium.com/why-vanilla-ecs-is-not-enough-d7ed4e3bebe5)). To use an example from *Breath of the Wild*: I want to tell my game that fire catches on wood, **no matter the circumstance of fire catching wood**, whether I am lighting an arrowhead on a bonfire or hurling magic fireballs at an enemy Bokoblin's wooden shield.
@@ -42,7 +55,7 @@ For my project I decided to go with [a C# wrapper for Flecs](https://github.com/
 
 ### Paradigm shift
 
-ECS sounds very cool at first, but once you start trying to create components and systems it can be a bit daunting of how to proceed appropriately. Researching the Flecs user manual helped me understand a lot of the unique aspects and challenges of ECS. I decided on a new Hello World: Have at least 4 digits of entities carrying this image of Pochita from *CHAINSAW MAN* bounce around in an enclosed square.
+ECS sounds very cool at first, but once you start trying to create components and systems it can be a bit daunting of how to proceed appropriately. Researching the Flecs user manual helped me understand a lot of the unique aspects and challenges of ECS. I decided on a new Hello World: Have at least 5 digits of entities carrying this image of Pochita from *CHAINSAW MAN* bounce around in an enclosed square.
 
 ![Pochita](/assets/images/posts/01_pochita.png)
 
@@ -108,7 +121,7 @@ So far it's just a simple setup with an entity browser that allows the user to d
 
 # Conclusion
 
-The final result (for now) is 2500 Pochitas bouncing around a virtual box. I can move the camera around or change any of their positions/velocities as I wish.
+The final result (for now) is 10,000 Pochitas bouncing around a virtual box. I can move the camera around or change any of their positions/velocities as I wish.
 
 {% include youtube.html id='Jxl7S-t2Azc' %}
 
