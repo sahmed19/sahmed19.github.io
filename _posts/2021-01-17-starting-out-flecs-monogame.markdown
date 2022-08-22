@@ -5,7 +5,7 @@ date:   2022-08-17 10:35:00 +0800
 categories: blog
 ---
 # Leaving the Unity birdnest
-I started game development when I was around ten or so using Clickteam Fusion to make simple platformers. After I learned to code, I started using Unity, and have been a pretty loyal Unity dev ever since. All I've ever really known is coding within Unity's paradigm of GameObjects and C# and whatnot. I figured it was time to try something new.
+I started game development when I was around ten using Clickteam Fusion to make simple platformers. After learning to code, I started using Unity, and have been a pretty loyal Unity dev ever since. All I've ever really known is coding within Unity's paradigm of GameObjects and C# and whatnot. I figured it was time to try something new.
 
 ### What to pick?
 To maximize the learning opportunity I wanted to use a lower-key framework, something that leaves most of the game loop to me.
@@ -32,7 +32,7 @@ Which brings us to...
 
 # In my ECS Era
 
-I watched [that one Overwatch GDC Talk that everyone mentions about ECS](https://youtu.be/zrIY0eIyqmI) and was immediately sold. One of my absolute favorite aspects of game design is **consistent systems.** I love when every actor in a game, from the player to enemies to even random little objects, have to obey the same rules of the universe. 
+I watched [that one Overwatch GDC Talk about ECS](https://youtu.be/zrIY0eIyqmI) and was immediately sold. One of my absolute favorite aspects of game design is **consistent systems.** I love when every actor in a game, from the player to enemies to even random little objects, have to obey the same rules of the universe. 
 
 These personal core values of game design is basically a match made in heaven with ECS, a programming paradigm based on "declarations (there shall be this)" instead of "imperative statements (do this)" ([Martens](https://ajmmertens.medium.com/why-vanilla-ecs-is-not-enough-d7ed4e3bebe5)). To use an example from *Breath of the Wild*: I want to tell my game that fire catches on wood, **no matter the circumstance of fire catching wood**, whether I am lighting an arrowhead on a bonfire or hurling magic fireballs at an enemy Bokoblin's wooden shield.
 
