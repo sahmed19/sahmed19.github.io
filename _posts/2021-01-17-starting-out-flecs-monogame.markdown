@@ -22,7 +22,7 @@ It seems like a pattern I have for any new engine/framework is... **try to make 
 
 ![MyFirstMonoScreenshot](/assets/images/posts/01_my-first-mono-screenshot.png)
 
-Getting Quote on the screen with relatively basic platformer controls is at this point my personal *Hello World*. I have to admit, I was intimidated at first by having no software to go off other than good old VSCode, but after this point most of my anxieties disappeared. I love the freedom of having the framework give me the bare essentials: an entry point, a `Tick()`, and a `Draw()`.
+Getting Quote on the screen with relatively basic platformer controls is at this point my personal *Hello World*. I have to admit, I was intimidated at first by having no software to go off other than good old VSCode, but after this point most of my anxieties disappeared. I love the freedom of having the framework give me just the bare essentials: an entry point, a `Tick()`, and a `Draw()`.
 
 I was about to type out a familiar Actor.cs class... when the freedom really went to my head. After all, I've been doing the traditional pattern my whole life. While everyone else was going out and partying and hating OOP last year, I had to stay inside with my GameObjects and MonoBehaviours. It's not a phase, Mom!
 
