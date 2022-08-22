@@ -32,7 +32,13 @@ Which brings us to...
 
 # In my ECS Era
 
-There are a lot of in-depth explanations for ECS online -- one of the best ones is an Overwatch GDC talk linked below -- so I'll try to distill the essence of it briefly in three main points.
+I watched [that one Overwatch GDC Talk that everyone mentions about ECS](https://youtu.be/zrIY0eIyqmI) and was immediately sold. One of my absolute favorite aspects of game design is **consistent systems.** I love when every actor in a game, from the player to enemies to even random little objects, have to obey the same rules of the universe. 
+
+These personal core values of game design is basically a match made in heaven with ECS, a programming paradigm based on "declarations (there shall be this)" instead of "imperative statements (do this)" ([Martens](https://ajmmertens.medium.com/why-vanilla-ecs-is-not-enough-d7ed4e3bebe5)). To use an example from *Breath of the Wild*: I want to tell my game that fire catches on wood, **no matter the circumstance of fire catching wood**, whether I am lighting an arrowhead on a bonfire or hurling magic fireballs at an enemy Bokoblin's wooden shield.
+
+### What is ECS, anyway?
+
+There are a lot of in-depth explanations for ECS online -- one of the best ones is an Overwatch GDC talk linked above -- so I'll try to distill the essence of it briefly in three main points.
 
 * 1: Your game consists of a list of **Entities**. These have no individual data/functionality but contain a list of **Components**.
 * 2: These **Components** are SIMPLY data-objects with zero functionality. Nothing more.
@@ -41,13 +47,7 @@ So far, this may sound familiar to Unity or Unreal users, but the *zero function
 
 * 3: Sets of **Systems** iterate over components that they care about and read/write accordingly.
 
-This is the crux of ECS software design: complete separation between data and logic.
-
-### What ECS is good for
-
-I watched [that one Overwatch GDC Talk that everyone mentions about ECS](https://youtu.be/zrIY0eIyqmI) and was immediately sold. One of my absolute favorite aspects of game design is **consistent systems.** I love when every actor in a game, from the player to enemies to even random little objects, have to obey the same rules of the universe. 
-
-These personal core values of game design is basically a match made in heaven with ECS, a programming paradigm based on "declarations (there shall be this)" instead of "imperative statements (do this)" ([Martens](https://ajmmertens.medium.com/why-vanilla-ecs-is-not-enough-d7ed4e3bebe5)). To use an example from *Breath of the Wild*: I want to tell my game that fire catches on wood, **no matter the circumstance of fire catching wood**, whether I am lighting an arrowhead on a bonfire or hurling magic fireballs at an enemy Bokoblin's wooden shield.
+This is the crux of ECS software design: complete separation between data and logic. Entities only care about what components they have and components only care about what data they hold. It's all up to systems to determine the flow of change in your software, and an ordered set of systems is massively easier to keep in check when compared to the typical OOP slew of side-effects. The "I want to damage my enemy, but sometimes they can block it, but sometimes I have armor-piercing"-type situations we've all been in suddenly feel a lot more manageable.
 
 For my project I decided to go with [a C# wrapper for Flecs](https://github.com/flecs-hub/flecs-cs).
 
