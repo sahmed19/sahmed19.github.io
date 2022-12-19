@@ -37,10 +37,8 @@ author:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/sahmed19"
     - label: "Twitter"
-#      icon: "fa fa-twitter"
+      icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/wheatpenguin"
-
-
 
 
 description: >- # this means to ignore newlines until "baseurl:"
