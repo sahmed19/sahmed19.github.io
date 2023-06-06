@@ -23,6 +23,7 @@ minimal_mistakes_skin: dark
 search: true
 
 repository: "sahmed19/sahmed19.github.io"
+url: "sahmed19/sahmed19.github.io"
 
 # Build settings
 markdown: kramdown
@@ -33,6 +34,8 @@ paginate: 5
 # amount of posts to show
 paginate_path: /page:num/
 timezone: America/Los_Angeles
+
+github: [metadata]
 
 include:
   - _pages
