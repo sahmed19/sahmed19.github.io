@@ -19,7 +19,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Technical artist, tools programmer, animator, 3D Artist, graphics programmer, gameplay programmer.
 twitter_username: wheatpenguin
 github_username: sahmed19
-minimal_mistakes_skin: dark
+minimal_mistakes_skin: plum
 search: false
 
 repository: "sahmed19/sahmed19.github.io"
