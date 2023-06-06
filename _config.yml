@@ -20,7 +20,7 @@ description: >-
 twitter_username: wheatpenguin
 github_username: sahmed19
 minimal_mistakes_skin: dark
-search: false
+search: true
 
 repository: "sahmed19/sahmed19.github.io"
 
