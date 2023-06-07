@@ -26,7 +26,9 @@ View the ShaderToy here: [link](https://www.shadertoy.com/view/cd2GWW)
 
 ---
 
-
+Lighting            |  Aniso Hair & POM Eyes          |  Character FX
+:-------------------------:|:-------------------------:|:-------------------------:
+![](/assets/images/portfolio/spookulele-character-shader-1.gif) | ![](/assets/images/portfolio/spookulele-character-shader-2.gif) | ![](/assets/images/portfolio/spookulele-character-shader-3.gif)
 
 #### SPOOKULELE: Character Ubershader
 *Written in HLSL & Amplify Shader Editor (Unity URP)*
