@@ -22,3 +22,17 @@ Done as part of a Blizzard graphics test. I implemented:
 
 View the ShaderToy here: [link](https://www.shadertoy.com/view/cd2GWW)
 
+---
+
+Lighting            |  Aniso Hair & POM Eyes          |  Character FX
+:-------------------------:|:-------------------------:|:-------------------------:
+![](/assets/images/portfolio/spookulele-character-shader-1.gif) | ![](/assets/images/portfolio/spookulele-character-shader-2.gif) | ![](/assets/images/portfolio/spookulele-character-shader-3.gif)
+
+#### SPOOKULELE: Character Ubershader
+*Written in HLSL & Amplify Shader Editor (Unity URP)*
+
+Created to handle all character materials in SPOOKULELE.
+* Directional Subsurface Scattering
+* Kajiya-Kay anisotropic hair shading
+* Parallax Occlusion Mapping eye-shading
+* Character FX such as flashes, disintegration
