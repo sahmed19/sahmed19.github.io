@@ -3,6 +3,8 @@ permalink: /graphics/
 title: "Tech Art & Graphics"
 toc: true
 toc_sticky: true
+author_profile: false
+
 ---
 
 ![](/assets/images/portfolio/shadertoy-raycaster.gif)

@@ -3,6 +3,8 @@ permalink: /toolsdev/
 title: "Tools Development"
 toc: true
 toc_sticky: true
+author_profile: false
+
 ---
 
 {% include video id="1kAALUpsEf7EQTr3TKZI9_pOFnWzm6TMF" provider="google-drive" width="200" height="100"%}
