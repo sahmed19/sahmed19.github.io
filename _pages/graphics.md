@@ -40,7 +40,7 @@ Created to handle all character materials in SPOOKULELE.
 * Character FX such as flashes, disintegration
 
 ## SPOOKULELE: Procedural Animation
-*Written in C#. Some HLSL & Python*
+*Written in C#. Some HLSL*
 
 ![](/assets/images/portfolio/spookulele-procedural-animation-1.gif)
 
@@ -50,6 +50,10 @@ Head Tracking            |  Blinking          |  Voice-controlled lighting
 
 ## BLOOMPUNK: Environment Set Dress & Lighting
 *Unity*
+
+
+![](https://cdna.artstation.com/p/assets/images/images/062/971/888/large/sheehan-ahmed-bp-pf-01.jpg?1684380933)
+![](https://cdnb.artstation.com/p/assets/images/images/062/971/889/large/sheehan-ahmed-bp-pf-02.jpg?1684380944)
 
 ![](https://cdna.artstation.com/p/assets/images/images/062/971/842/original/sheehan-ahmed-bp-gif01.gif?1684380786)
 ![](https://cdnb.artstation.com/p/assets/images/images/062/971/845/original/sheehan-ahmed-bp-gif02.gif?1684380796)
