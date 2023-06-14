@@ -7,6 +7,11 @@ author_profile: false
 
 ---
 
+## Skills
+
+- Software: Unity, Unreal Engine
+- Languages: HLSL/GLSL, ShaderGraph, Amplify SE, Unreal Material Editor, C#, C++, Python, PyQt
+
 ## Shadertoy Raycaster
 *Written in GLSL*
 
@@ -27,6 +32,8 @@ View the ShaderToy here: [link](https://www.shadertoy.com/view/cd2GWW)
 
 ## SPOOKULELE: Character Ubershader
 *Written in HLSL & Amplify Shader Editor (Unity URP)*
+
+SPOOKULELE is an Action-Adventure game set in New Orleans. You play as two Reapers, Spooky and Haru, who use their musical abilities to fight ghosts haunting the city.
 
 Stylized Lighting            |  Aniso Hair & POM Eyes          |  Character FX
 :-------------------------:|:-------------------------:|:-------------------------:
@@ -51,6 +58,9 @@ Head Tracking            |  Blinking          |  Voice-controlled lighting
 ## BLOOMPUNK: Environment Set Dress & Lighting
 *Unity*
 
+Bloompunk is a unique hybrid of first-person shooter and roguelike games set in a vibrant world of animated plants.
+
+I led a team of 7 3D artists as technical art director to produce assets in a consistent style for the game. I also set dressed, lit, and did environmental visual effects for the game environment.
 
 ![](https://cdna.artstation.com/p/assets/images/images/062/971/888/large/sheehan-ahmed-bp-pf-01.jpg?1684380933)
 ![](https://cdnb.artstation.com/p/assets/images/images/062/971/889/large/sheehan-ahmed-bp-pf-02.jpg?1684380944)

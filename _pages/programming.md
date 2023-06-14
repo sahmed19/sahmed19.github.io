@@ -10,7 +10,7 @@ author_profile: false
 ## SPOOKULELE: Combat
 *Written in C#, Unity*
 
-**SPOOKULELE is an Action-Adventure game set in New Orleans. You play as two Reapers, Spooky and Haru, who use their musical abilities to fight ghosts haunting the city.**
+SPOOKULELE is an Action-Adventure game set in New Orleans. You play as two Reapers, Spooky and Haru, who use their musical abilities to fight ghosts haunting the city.
 
 <a href="https://www.spookulele.games/spookulele" class="btn btn--primary">Spookulele Website</a>
 
