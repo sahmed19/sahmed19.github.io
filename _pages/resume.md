@@ -4,7 +4,7 @@ permalink: /resume/
 author_profile: true
 ---
 
-[Downloadable PDF](/assets/docs/sheehan_ahmed_resume_72dpi.pdf)
+[Downloadable PDF](/assets/docs/sheehan_ahmed_resume.pdf)
 
 #### University of Southern California
 *Bachelor of Fine Arts in Interactive Entertainment*
