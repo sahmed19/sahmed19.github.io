@@ -12,6 +12,13 @@ author_profile: false
 - Software: Unity, Unreal Engine
 - Languages: C#, C++, Python, PyQt
 
+## Personal: Channel Packer Tool
+*Written in Python PyQt*
+
+![](/assets/images/portfolio/personal-channel-packer-tool.gif)
+
+Created to aid in the process of creating channel-packed mask textures for various purposes, such as PBR textures or VFX source textures.
+
 ## SPOOKULELE: Frame Data Editor & Visualizer
 *Written in C#, extension of Unity Editor*
 
@@ -51,15 +58,12 @@ Grandma Green is a student-led, free-to-play virtual pet and gardening simulatio
 
 ![](/assets/images/portfolio/grandma-green-audio-tool.gif){:width="75%"}
 
-
 Created to help the audio team iterate on their sound assets right in Unity engine. Based on the WWise audio software.
-
 
 ## Grandma Green: Dialogue Tool
 *Written in Python PyQt*
 
 ![](/assets/images/portfolio/grandma-green-dialogue-tool.gif){:width="75%"}
-
 
 Created to help the narrative team quickly and painlessly convert their shared Google Sheet workspace to game-compatible Yarn files.
 
