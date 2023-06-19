@@ -8,6 +8,7 @@ author_profile: true
 
 #### University of Southern California
 *Bachelor of Fine Arts in Interactive Entertainment*
+
 *Video Game Programming Minor*
 
 ## Skills
@@ -32,7 +33,7 @@ author_profile: true
 * Created dozens of VFX for combat gameplay involving lightning, ice, and smoke effects
 * Authored an ubershader in HLSL to handle eye, skin, and hair shading models for characters
 
-#### AIRSTRAFE INTERACTIVE — Technical Art Intern
+#### AIRSTRAFE INTERACTIVE — Technical Artist
 *Aug 2021 - May 2022*
 * Worked closely with art team to create in-engine tools to optimize character art pipeline
 * Heavily modified a storebought HLSL Toon shader to fit the artists’ needs
