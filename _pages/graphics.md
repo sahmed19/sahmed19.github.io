@@ -12,6 +12,13 @@ author_profile: false
 - Software: Unity, Unreal Engine
 - Languages: HLSL/GLSL, ShaderGraph, Amplify SE, Unreal Material Editor, C#, C++, Python, PyQt
 
+## Rain Visual Effect
+*Written in HLSL and ShaderGraph (Unity URP)*
+
+![FinalGif](../_site/assets/images/portfolio/swallow-falls-rain.gif)
+
+Read the breakdown blogpost [here.](https://www.sheehanahmed.com/realtime-rain-vfx-breakdown/)
+
 ## Shadertoy Raycaster
 *Written in GLSL*
 
