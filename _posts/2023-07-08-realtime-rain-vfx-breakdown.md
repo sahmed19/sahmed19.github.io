@@ -15,7 +15,7 @@ toc_sticky: true
 
 *Made with Unity, Blender, HLSL, ShaderGraph, VFX Graph*
 
-My California friends always look at me like I'm crazy when I mention how much I love the rain and overcast, cloudy days. I can't help it! I'm from the best place on Earth: the Pacific Northwest. As a Pacific Northwest native, it would be shameful for me to not make a rain visual effect. You can see the final product above.
+My friends in LA always look at me like I'm crazy when I mention how much I love the rain and overcast, cloudy days. I can't help it! I'm from the best place on Earth: the Pacific Northwest. As a Pacific Northwest native, it would be shameful for me to not make a rain visual effect. You can see the final product above.
 
 
 ### Gathering Reference
