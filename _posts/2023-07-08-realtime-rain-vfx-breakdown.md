@@ -45,7 +45,7 @@ The base environment is a simple blocky mesh that has areas of cover, elevated g
 
 ### The Ortho Camera
 
-Inspired by my friend Sichen Liu's [Odradek Scanner effect](https://80.lv/articles/recreating-death-stranding-odradek-terrain-scanner-in-unity/), I created an orthographic camera facing down on the scene. I render out this camera's depth and normals to a RenderTexture.
+Inspired by my friend Sichen Liu's [Odradek Scanner effect](https://80.lv/articles/recreating-death-stranding-odradek-terrain-scanner-in-unity/), I created an orthographic camera facing down on the scene. I render out this camera's depth and normals to a RenderTexture. These will come in handy later.
 
 ![NormalDepth](/assets/images/posts/02_normal-depth.png){:width="100%"}
 
@@ -60,6 +60,8 @@ The droplets are as simple as can be: a LineRenderer in the VFX Graph that scale
 ### Splashes
 
 Splashes are a spritesheet particle spawned along the ground with the particle-up facing the normal and the particle-forward facing the camera plane. However, I ran into issues with ledges; splashes were spawning half-on a ledge and along the wall, which was immersion-breaking and ugly. To solve this, I run the orthographic camera's depth through a Sobel filter, which essentially creates outlines around areas of depth contrast. Because the camera is facing downward, these areas of high contrast are my walls and ledges.
+
+![Sobel](/assets/images/posts/02_sobel.png){:width="50%"}
 
 By passing this mask into my VFX graph, I can make my splashes ignore walls. The outline has the added benefit of culling away a bit from the ledges, which doubly solves the half-on-ledge problem as well.
 
@@ -101,6 +103,9 @@ Here is the effect with exaggurated visibility.
 ### Mist
 
 Finally, the mist is scrolling noise with a depth mask in order to keep it closely hugging the ground.
+Here is the effect with exaggurated visibility.
+
+![Mist](/assets/images/posts/02_mist.gif)
 
 ### Conclusion
 
