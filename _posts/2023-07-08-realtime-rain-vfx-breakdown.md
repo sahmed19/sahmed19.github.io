@@ -109,6 +109,6 @@ Here is the effect with exaggurated visibility.
 
 ### Conclusion
 
-Thank you for reading my breakdown!
+Thank you for reading my breakdown! This was a fun project that challenged me to use the information I had at hand in interesting ways. Finally, I feel that the duty I owe my home state has been fulfilled.
 
 Follow me [@wheatpenguin](https://twitter.com/wheatpenguin) on Twitter.
