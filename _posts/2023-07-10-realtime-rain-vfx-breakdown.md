@@ -1,6 +1,6 @@
 ---
 title:  "Realtime Rain VFX Breakdown"
-date:   2022-08-17 10:35:00 +0800
+date:   2023-07-10 10:35:00 +0800
 tags:
   - C#
   - HLSL
@@ -15,7 +15,7 @@ toc_sticky: true
 
 *Made with Unity, Blender, HLSL, ShaderGraph, VFX Graph*
 
-My friends in LA always look at me like I'm crazy when I mention how much I love the rain and overcast, cloudy days. I can't help it! I'm from the best place on Earth: the Pacific Northwest. As a Pacific Northwest native, it would be shameful for me to not make a rain visual effect. You can see the final product above.
+My friends in LA look at me like I’m crazy when I mention how much I love rainy overcast days. I can’t help it! I’m from the best place on Earth: the Pacific Northwest.
 
 
 ### Gathering Reference
@@ -26,7 +26,7 @@ Now usually if I wanted to take a close look at rain, I would just take a stroll
 
 ---
 
-There were some phenomena in the reference video that I chose to leave out, namely the bubbles and the base waves on the surface of the water. I wanted to shoot for puddles that looked a little shallower but still had the vibrancy of rain hitting a deep body of water. It's not completely realistic, but then again, no great visual effect ever is!
+There were some phenomena in the reference video that I chose to leave out, namely the bubbles and the base waves on the surface of the water. I wanted to shoot for a shallower puddle that still had the vibrancy of rain hitting a deep body of water. It's not completely realistic, but then again, no great visual effect ever is!
 
 My effect was made in Unity by layering several steps/passes:
 
@@ -39,7 +39,7 @@ My effect was made in Unity by layering several steps/passes:
 
 ### The Base Environment
 
-The base environment is a simple blocky mesh that has areas of cover, elevated ground, and varied shapes (sphere and angled block). This represents the main environment problems I expected my rain to solve for. I wanted the splashes to follow the form of the environment and rain to ignore areas that should be covered and safe from rainfall.
+The base environment is a simple blocky mesh that has areas of cover, elevated ground, and varied shapes (sphere and angled block). These represent the main environment problems I expected my rain to solve for. I wanted the splashes to follow the form of the environment and rain to ignore areas that should be covered and safe from rainfall.
 
 ![BaseEnvironment](/assets/images/posts/02_base-environment.png){:width="100%"}
 
@@ -59,11 +59,11 @@ The droplets are as simple as can be: a LineRenderer in the VFX Graph that scale
 
 ### Splashes
 
-Splashes are a spritesheet particle spawned along the ground with the particle-up facing the normal and the particle-forward facing the camera plane. However, I ran into issues with ledges; splashes were spawning half-on a ledge and along the wall, which was immersion-breaking and ugly. To solve this, I run the orthographic camera's depth through a Sobel filter, which essentially creates outlines around areas of depth contrast. Because the camera is facing downward, these areas of high contrast are my walls and ledges.
+Splashes are a spritesheet particle spawned along the ground with the particle-up facing the normal and the particle-forward facing the camera plane. During my process, I ran into issues with ledges. Splashes were spawning half-on a ledge and along the wall, which were immersion-breaking and ugly. To solve this, I run the orthographic camera's depth through a Sobel filter, which essentially creates outlines around areas of depth contrast. Because the camera is facing downward, these areas of high contrast are my walls and ledges.
 
 ![Sobel](/assets/images/posts/02_sobel.png){:width="50%"}
 
-By passing this mask into my VFX graph, I can make my splashes ignore walls. The outline has the added benefit of culling away a bit from the ledges, which doubly solves the half-on-ledge problem as well.
+By passing this mask into my VFX graph, I can make my splashes ignore walls. The outline has the added benefit of culling away a bit from the ledges, which solves the half-on-ledge problem as well.
 
 ![Splashes](/assets/images/posts/02_splashes.gif)
 
@@ -75,17 +75,19 @@ The puddles and general wetness in the scene was painted on through vertex color
 
 ### Ripples
 
-The typical approach for ripples on deep water is a voronoi-style pattern that creates overlapping circles. I wanted to make the ripples feel like they had more local impact. I used a normal texture for the ripple.
+The typical approach for ripples on deep water is a voronoi-style pattern that creates overlapping circles. I wanted to make the ripples feel like they had more local impact, so I instead used a normal texture for the ripple.
 
 ![Wetness](/assets/images/posts/02_ripple-texture.png){:width="50%"}
 
-In my shader, I sampled this texture with two layers of ripples. Having two layers on separate start times helps kill the grid-like look. I then simulate a ripple animation by scaling the UV of the ripples and fading the normal strength in and out with an ease curve based on the following function: `1.0 - pow(2.0 * input - 1.0, 2)`
+In my shader, I sampled this texture with two layers of ripples. Having two layers on separate start times helps kill the grid-like look. I then simulate a ripple animation by scaling the UV of the ripples and fading the normal strength in and out with an ease curve based on the following function: 
 
-This function gives a nice ease in and out to the ripple transparency that looks natural.
+`1.0 - pow(2.0 * input - 1.0, 2)`
+
+This function gives a nice ease to the ripple transparency that looks natural.
 
 ![Ripple](/assets/images/posts/02_ripples-shader.png)
 
-I also use a population slider that basically compares a `floor(rand(uv))` sample against a threshold value to kill a certain percentage of ripples. A full set of ripples looks strangely uniform anyway, and this gives me control over how fierce I want the rainfall to look.
+I also use a population slider that basically compares a `floor(rand(uv))` sample against a threshold value to kill a certain percentage of ripples. A full set of ripples looks strangely uniform anyway, and this gives me control over how torrential I want the rainfall to look.
 
 ![RipplePopulation](/assets/images/posts/02_ripple-population.gif)
 
@@ -109,7 +111,7 @@ Here is the effect with exaggurated visibility.
 
 ### Conclusion
 
-Thank you for reading my breakdown! This was a fun project that challenged me to use the information I had at hand in interesting ways. Finally, I feel that the duty I owe my home state has been fulfilled.
+Thank you for reading my breakdown! This was a fun project that challenged me to use the information I had at hand in interesting ways. Making a tribute to my home state felt satisfying, and I feel well-equipped to use ortho-camera depth sampling techniques for various other effects.
 
 ![FinalGif](/assets/images/portfolio/swallow-falls-rain.gif)
 
