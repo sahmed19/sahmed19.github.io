@@ -15,9 +15,9 @@ author_profile: false
 ## Rain Visual Effect
 *Written in HLSL and ShaderGraph (Unity URP)*
 
-![FinalGif](../_site/assets/images/portfolio/swallow-falls-rain.gif)
+![FinalGif](/assets/images/portfolio/swallow-falls-rain.gif)
 
-Read the breakdown blogpost [here.](https://www.sheehanahmed.com/realtime-rain-vfx-breakdown/)
+[Read the breakdown blogpost here.](https://www.sheehanahmed.com/realtime-rain-vfx-breakdown/)
 
 ## Shadertoy Raycaster
 *Written in GLSL*
