@@ -9,38 +9,45 @@ author_profile: false
 
 ## Skills
 
-- Software: Unity, Unreal Engine
+- Software: Unity, Unreal Engine, Blender, Maya, Substance 3D Suite
 - Languages: HLSL/GLSL, ShaderGraph, Amplify SE, Unreal Material Editor, C#, C++, Python, PyQt
 
+## SPOOKULELE: Environment Art (WIP)
+*2023, Unreal*
+
+* Updated version of *SPOOKULELE*'s French Quarter level in Unreal engine.
+* Modelled, sculpted, and textured various assets & trim sheets.
+
+![](https://cdna.artstation.com/p/assets/images/images/067/322/020/large/sheehan-ahmed-fq-wip-01.jpg?1695101981)
+![](https://cdna.artstation.com/p/assets/images/images/067/322/022/large/sheehan-ahmed-fq-wip-02.jpg?1695101986)
+![](https://cdna.artstation.com/p/assets/images/images/067/322/024/large/sheehan-ahmed-fq-wip-04.jpg?1695101997)
+![](https://cdnb.artstation.com/p/assets/images/images/067/322/027/large/sheehan-ahmed-fq-wip-06.jpg?1695102008)
+![](https://cdna.artstation.com/p/assets/images/images/067/322/028/large/sheehan-ahmed-fq-wip-07.jpg?1695102012){:width="75%"}
+![](https://cdnb.artstation.com/p/assets/images/images/067/322/029/large/sheehan-ahmed-fq-wip-08.jpg?1695102017){:width="75%"}
+
+[For more, see the Artstation post here.](https://www.artstation.com/artwork/QXwE44)
+
 ## Rain Visual Effect
-*Written in HLSL and ShaderGraph (Unity URP)*
+*2023, HLSL, VFX Graph & ShaderGraph (Unity URP)*
 
 ![FinalGif](/assets/images/portfolio/swallow-falls-rain.gif)
 
 [Read the breakdown blogpost here.](https://www.sheehanahmed.com/realtime-rain-vfx-breakdown/)
 
 ## Shadertoy Raycaster
-*Written in GLSL*
+*2022, GLSL*
 
-![](/assets/images/portfolio/shadertoy-raycaster.gif)
-
-
+![](/assets/images/portfolio/shadertoy-raycaster.gif){:width="75%"}
 
 Done as part of a Blizzard graphics test. I implemented:
-* Point & directional lighting with PBR reflectance
-* ambient lighting
-* emissive lighting
-* environment-mapped reflections
-* directional shadows
-* normal mapping
-* bloom
+* Point & directional lighting with PBR reflectance and normal mapping
+* ambient & emissive lighting with environment-mapped reflections
+* directional shadows & bloom
 
-View the ShaderToy here: [link](https://www.shadertoy.com/view/cd2GWW)
+[View the ShaderToy here.](https://www.shadertoy.com/view/cd2GWW)
 
 ## SPOOKULELE: Character Ubershader
-*Written in HLSL & Amplify Shader Editor (Unity URP)*
-
-SPOOKULELE is an Action-Adventure game set in New Orleans. You play as two Reapers, Spooky and Haru, who use their musical abilities to fight ghosts haunting the city.
+*2021, HLSL & Amplify Shader Editor (Unity URP)*
 
 Stylized Lighting            |  Aniso Hair & POM Eyes          |  Character FX
 :-------------------------:|:-------------------------:|:-------------------------:
@@ -54,7 +61,7 @@ Created to handle all character materials in SPOOKULELE.
 * Character FX such as flashes, disintegration
 
 ## SPOOKULELE: Procedural Animation
-*Written in C#. Some HLSL*
+*2021, C#, HLSL*
 
 ![](/assets/images/portfolio/spookulele-procedural-animation-1.gif)
 
@@ -62,12 +69,12 @@ Head Tracking            |  Blinking          |  Voice-controlled lighting
 :-------------------------:|:-------------------------:|:-------------------------:
 ![](/assets/images/portfolio/spookulele-procedural-animation-2.gif) | ![](/assets/images/portfolio/spookulele-procedural-animation-3.gif) | ![](/assets/images/portfolio/spookulele-procedural-animation-4.gif)
 
+
 ## BLOOMPUNK: Environment Set Dress & Lighting
-*Unity*
+*2022, Unity*
 
-Bloompunk is a unique hybrid of first-person shooter and roguelike games set in a vibrant world of animated plants.
-
-I led a team of 7 3D artists as Technical Art Director to produce assets in a consistent style for the game. I also set dressed, lit, and did environmental visual effects for the game environment.
+* Led a team of 7 3D artists to produce assets in a consistent style for the game
+* Set dressed, lit, and authored vfx for the game environment
 
 ![](https://cdna.artstation.com/p/assets/images/images/062/971/888/large/sheehan-ahmed-bp-pf-01.jpg?1684380933)
 ![](https://cdnb.artstation.com/p/assets/images/images/062/971/889/large/sheehan-ahmed-bp-pf-02.jpg?1684380944)
@@ -75,30 +82,10 @@ I led a team of 7 3D artists as Technical Art Director to produce assets in a co
 ![](https://cdna.artstation.com/p/assets/images/images/062/971/842/original/sheehan-ahmed-bp-gif01.gif?1684380786)
 ![](https://cdnb.artstation.com/p/assets/images/images/062/971/845/original/sheehan-ahmed-bp-gif02.gif?1684380796)
 
-For more, see the [Artstation post on my BLOOMPUNK environment work.](https://www.artstation.com/artwork/OGwmy8)
-
-## BLOOMPUNK: Documentation & Leadership
-
-As Technical Art Director, it was my responsibility to set a clear visual style and specify asset conventions for the team of 3D artists.
-
-**Art Bible**: Authored to document the style, tone, asset specifications, and naming conventions for BLOOMPUNK artwork.
-
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vT1r_zCHBDd-lSEA7oSzUYJciENr_6UDgb4DAf9SfUh2BxeK_W33xe7gcDRHBPxGcgK9pXnjvvFZ2BA/embed?start=false&loop=false&delayms=3000" frameborder="0" width="720" height="440" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-
-**Perforce Guide**: Authored to help the 3D artists navigate using Perforce.
-
-<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQdu-5Cl3APe16DpUnxfqBE5YvmhiGMfOS54QBipygqnHbWsQowrpPfkK-H_OgYruNZNl-gSM2tD4In/embed?start=false&loop=false&delayms=3000" frameborder="0" width="720" height="440" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-
-## House-builder: Painting UV Manipulation
-
-*House-builder* is an in-progress game about creating and decorating home interiors.
-
-![](/assets/images/portfolio/housebuilder-painting-resizer.gif)
-
-I implemented a painting asset that features custom images with stretch, tile, and fit modes. This utilizes an enum shader keyword to switch between the separate modes. In order to preserve the aspect ratio of the source image, I store the width and height ratio in the UV2 of each painting mesh.
+[For more, see the Artstation here.](https://www.artstation.com/artwork/OGwmy8)
 
 ## SPOOKULELE: Vango Rig & Animation
-*Blender*
+*2021, Blender*
 
 Vango is a ranged, shielded enemy. I modelled, rigged and animated the Vango animations.
 
@@ -117,3 +104,14 @@ Vango is a ranged, shielded enemy. I modelled, rigged and animated the Vango ani
 **Knock-up & Topple**
 
 ![](/assets/images/portfolio/spookulele-vango-knock-up.gif){:width="75%"}
+
+<!---
+## House-builder: Painting UV Manipulation
+
+*House-builder* is an in-progress game about creating and decorating home interiors.
+
+![](/assets/images/portfolio/housebuilder-painting-resizer.gif)
+
+I implemented a painting asset that features custom images with stretch, tile, and fit modes. This utilizes an enum shader keyword to switch between the separate modes. In order to preserve the aspect ratio of the source image, I store the width and height ratio in the UV2 of each painting mesh.
+
+-->
