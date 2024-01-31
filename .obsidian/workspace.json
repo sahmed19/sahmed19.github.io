@@ -1,0 +1,183 @@
+{
+  "main": {
+    "id": "09b9c91c35bb4dd6",
+    "type": "split",
+    "children": [
+      {
+        "id": "3a3e9a0ba8eaa7df",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ad96b9c8c6d6c409",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_posts/2024-01-28-dijkstra-algorithm-pixel-shader-for-tactics-movement.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "17913ff63e96f05c",
+    "type": "split",
+    "children": [
+      {
+        "id": "fb7ac1f1f1c4fe56",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f4d3f228047230d5",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "7a45e5cf49f85a9c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "c60dad5bc15e97df",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 359.5
+  },
+  "right": {
+    "id": "b26d6391bf593106",
+    "type": "split",
+    "children": [
+      {
+        "id": "7eb79384b494fc94",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "301d747fa6a71ff2",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "_posts/2024-01-28-dijkstra-algorithm-pixel-shader-for-tactics-movement.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "a55e8210af65df98",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "_posts/2024-01-28-dijkstra-algorithm-pixel-shader-for-tactics-movement.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "8c43d172b1df5891",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "2f395735c87b2062",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "_posts/2024-01-28-dijkstra-algorithm-pixel-shader-for-tactics-movement.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "ad96b9c8c6d6c409",
+  "lastOpenFiles": [
+    "_posts/2023-07-28-dark-souls-is-a-cozy-game.md",
+    "_posts/2024-01-28-dijkstra-algorithm-pixel-shader-for-tactics-movement.md",
+    "_site/assets/images/posts/04_final.gif",
+    "assets/images/posts/04_final.gif",
+    "_site/assets/images/posts/ezgif.com-speed.gif",
+    "assets/images/posts/ezgif.com-speed.gif",
+    "_site/assets/images/posts/04_expansion.gif",
+    "assets/images/posts/04_expansion.gif",
+    "_site/assets/images/posts/ezgif.com-video-to-gif-converter.gif",
+    "assets/images/posts/ezgif.com-video-to-gif-converter.gif",
+    "_site/assets/images/posts/04_fe-header.jpeg",
+    "assets/images/posts/04_fe-header.jpeg",
+    "assets/images/posts/image-asset.jpeg.crdownload",
+    "_layouts/tags.html",
+    "_layouts/tag.html",
+    "_layouts/splash.html",
+    "_layouts/single.html",
+    "_layouts/search.html",
+    "_layouts/posts.html",
+    "_layouts/home.html",
+    "_layouts/default.html",
+    "_layouts/compress.html",
+    "_posts/2023-07-10-realtime-rain-vfx-breakdown.md",
+    "_posts/Untitled.md",
+    "_posts/2023-07-27-recommended-naming-conventions.md",
+    "_posts/2022-08-17-starting-out-flecs-monogame.md",
+    "_pages/toolsdev.md",
+    "_pages/programming.md",
+    "2024-01-25.md",
+    "_pages/about.md",
+    "_pages/404.md"
+  ]
+}
