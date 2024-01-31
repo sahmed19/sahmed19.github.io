@@ -146,8 +146,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "ad96b9c8c6d6c409",
+  "active": "f4d3f228047230d5",
   "lastOpenFiles": [
+    "_site/dark-souls-is-a-cozy-game/index.html",
+    "_site/dark-souls-is-a-cozy-game",
+    "_layouts/archive.html",
     "_posts/2023-07-28-dark-souls-is-a-cozy-game.md",
     "_posts/2024-01-28-dijkstra-algorithm-pixel-shader-for-tactics-movement.md",
     "_site/assets/images/posts/04_final.gif",
@@ -168,8 +171,6 @@
     "_layouts/search.html",
     "_layouts/posts.html",
     "_layouts/home.html",
-    "_layouts/default.html",
-    "_layouts/compress.html",
     "_posts/2023-07-10-realtime-rain-vfx-breakdown.md",
     "_posts/Untitled.md",
     "_posts/2023-07-27-recommended-naming-conventions.md",

@@ -22,7 +22,7 @@ github_username: sahmed19
 minimal_mistakes_skin: dark
 search: false
 
-repository: "sahmed19/sahmed19.github.io"
+repository: sahmed19/sahmed19.github.io
 
 # Build settings
 markdown: kramdown
@@ -111,6 +111,7 @@ defaults:
     values:
       layout: single
       author_profile: true
+      comments: true
 
 category_archive:
   type: liquid
@@ -118,3 +119,10 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+comments:
+  provider: "utterances"
+  utterances:
+    theme: "github-dark" # "github-dark"
+    issue_term: "pathname"
+    label: "comment" # Optional - must be existing label.
