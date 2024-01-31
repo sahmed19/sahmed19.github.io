@@ -7,6 +7,8 @@ tags:
 
 toc: true
 toc_sticky: true
+
+excerpt: ""
 ---
 
 {% include youtube.html id='S7RwDOuJ_ds' %}

@@ -6,6 +6,8 @@ tags:
 
 toc: true
 toc_sticky: true
+
+excerpt: ""
 ---
 
 ## Artwork & Other Non-Code Files

@@ -16,13 +16,11 @@
 title: Sheehan Ahmed
 email: ssahmed@usc.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  Technical artist, tools programmer, animator, 3D Artist, graphics programmer, gameplay programmer.
+  Tools programmer, graphics programmer, gameplay programmer.
 twitter_username: wheatpenguin
 github_username: sahmed19
 minimal_mistakes_skin: dark
 search: false
-
-repository: sahmed19/sahmed19.github.io
 
 # Build settings
 markdown: kramdown
@@ -33,6 +31,7 @@ paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: America/Los_Angeles
 
+repository: sahmed19/sahmed19.github.io
 github: [metadata]
 
 include:
@@ -102,7 +101,7 @@ defaults:
       author_profile: true
       read_time: true
       comments: true
-      share: true
+      share: false
       related: true
   # _pages
   - scope:
@@ -111,7 +110,6 @@ defaults:
     values:
       layout: single
       author_profile: true
-      comments: true
 
 category_archive:
   type: liquid

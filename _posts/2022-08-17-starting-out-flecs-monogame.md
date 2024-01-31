@@ -8,6 +8,8 @@ tags:
 
 toc: true
 toc_sticky: true
+
+excerpt: ""
 ---
 ## Leaving the Unity birdnest
 I started game development when I was around ten using Clickteam Fusion to make simple platformers. After learning to code, I started using Unity, and have been a pretty loyal Unity dev ever since. All I've ever really known is coding within Unity's paradigm of GameObjects and C# and whatnot. I figured it was time to try something new.

@@ -1,12 +1,15 @@
 ---
-title: Dijkstra's Algorithm Pixel Shader for Tactics Movement
+title: "Dijkstra's Algorithm Pixel Shader for Tactics Movement"
 date: 2024-01-28 10:35:00 +0800
+
 tags:
   - HLSL
+  
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
   overlay_image: /assets/images/posts/04_fe-header.jpeg
+  
 excerpt: ""
 ---
 I've been playing Intelligent Systems' *Fire Emblem* games recently. It's hard not to appreciate how the tactical movement gives depth and immersion to a Game Map that's visually just a handful of pixels compared to modern game landscapes like *Red Dead Redemption 2* or *Breath of the Wild*. Considering units' positioning down to choices between adjacent grid cells gets a player intimately engaging with the game environment.
@@ -309,3 +312,5 @@ In the future for my tactics side-project, I'll add:
 Thank you for reading my blog. If you were impressed and are an employer, consider hiring me as a Graphics Programmer ([My LinkedIn](https://www.linkedin.com/in/sheehan-ahmed-94136b192/)).
 
 Otherwise, follow me [@wheatpenguin](https://twitter.com/wheatpenguin) on Twitter.
+
+---
