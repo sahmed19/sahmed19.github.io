@@ -1,6 +1,6 @@
 ---
 title:  "Video games aren’t cool anymore (and Japan can’t save us) [DRAFT]"
-date:   2024-10-15 02:00:00 +0800
+date:   2025-03-29 02:00:00 +0800
 tags:
   - life
 
