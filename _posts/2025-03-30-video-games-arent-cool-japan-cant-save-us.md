@@ -10,6 +10,8 @@ header:
   overlay_image: /assets/images/posts/07_header.png
 
 excerpt: ""
+toc: true
+toc_sticky: true
 ---
 
 ## What is 'coolness'?
