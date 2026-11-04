@@ -16,7 +16,7 @@ toc_sticky: true
 
 {% include gif.html src="/assets/images/portfolio/personal-channel-packer-tool.gif" %}
 
-Created to aid in the process of creating channel-packed mask textures for various purposes, such as PBR textures or VFX source textures.
+A desktop tool for combining texture channels into packed masks for PBR materials and VFX source textures.
 
 ## SPOOKULELE: Frame Data Editor & Visualizer
 *Written in C#, extension of Unity Editor*
@@ -57,7 +57,7 @@ Grandma Green is a student-led, free-to-play virtual pet and gardening simulatio
 
 {% include gif.html src="/assets/images/portfolio/grandma-green-audio-tool.gif" width="75%" %}
 
-Created to help the audio team iterate on their sound assets right in Unity engine. Based on the WWise audio software.
+A Unity editor tool for the audio team to iterate on sound assets directly in the engine, with a workflow inspired by Wwise.
 
 ## Grandma Green: Dialogue Tool
 *Written in Python PyQt*

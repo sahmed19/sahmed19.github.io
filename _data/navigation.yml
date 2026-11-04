@@ -1,6 +1,8 @@
 main:
   - title: "Home"
     url: /
+  - title: "Work"
+    url: /#work
   - title: "Resume"
     url: /resume/
   - title: "Blog Posts"

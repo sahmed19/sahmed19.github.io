@@ -2,28 +2,55 @@
 layout: default
 ---
 <section class="intro container">
-  <h1 class="sr-only">{{ site.author.name }}, {{ site.role }}</h1>
-  <ul class="social social--intro">
-    {% for s in site.social %}
-      <li><a href="{{ s.url }}" rel="me noopener" target="_blank">{% include icon.html name=s.icon %}<span>{{ s.label }}</span></a></li>
-    {% endfor %}
-    <li><a href="{{ '/resume/' | relative_url }}">{% include icon.html name='download' %}<span>Resume</span></a></li>
-  </ul>
-</section>
-
-<section class="section container">
-  <div class="grid grid--2">
-    {% for d in site.data.projects.disciplines %}
-      <a class="card" href="{{ d.url | relative_url }}">
-        <div class="card__media card__media--tall">{% include media.html name=d.media alt=d.title %}</div>
-        <h2 class="card__title card__title--lg">{{ d.title }}</h2>
-      </a>
-    {% endfor %}
+  <div class="intro__heading">
+    <p class="eyebrow">{{ site.author.name }} · {{ site.role }}</p>
+    <h1 class="intro__title">Technical art for games.</h1>
+  </div>
+  <div class="intro__copy">
+    <p class="intro__lede">I build shaders, real-time visual effects, and tools that help artists bring their ideas into the engine.</p>
+    <div class="intro__actions">
+      <a class="btn btn--primary" href="#work">Explore my work <span aria-hidden="true">&darr;</span></a>
+      <a class="btn" href="mailto:{{ site.email }}">Get in touch <span aria-hidden="true">&nearr;</span></a>
+    </div>
+    <ul class="social social--intro">
+      {% for s in site.social %}
+        <li><a href="{{ s.url }}" rel="me noopener" target="_blank">{% include icon.html name=s.icon %}<span>{{ s.label }}</span></a></li>
+      {% endfor %}
+      <li><a href="{{ '/resume/' | relative_url }}">{% include icon.html name='download' %}<span>Resume</span></a></li>
+    </ul>
   </div>
 </section>
 
-<section class="section container">
-  <h2 class="section__title">Selected work</h2>
+<section class="section container" id="work" aria-labelledby="work-title">
+  <h2 class="section__title" id="work-title">Selected work</h2>
+  <nav class="work-nav" aria-label="Portfolio disciplines">
+    {% for d in site.data.projects.disciplines %}
+      <a class="work-nav__link" href="{{ d.url | relative_url }}">
+        <span class="work-nav__title">{{ d.title }} <span aria-hidden="true">&nearr;</span></span>
+        <span class="work-nav__description">{{ d.description }}</span>
+      </a>
+    {% endfor %}
+  </nav>
+
+  {% assign spotlight = site.data.projects.spotlight %}
+  <article class="spotlight" aria-labelledby="spotlight-title">
+    <div class="spotlight__media">
+      {% include media.html name=spotlight.media alt=spotlight.alt %}
+    </div>
+    <div class="spotlight__copy">
+      <p class="eyebrow">{{ spotlight.category }}</p>
+      <h3 class="spotlight__title" id="spotlight-title">{{ spotlight.title }}</h3>
+      <p class="spotlight__description">{{ spotlight.description }}</p>
+      <p class="spotlight__credit">{{ spotlight.credit }}</p>
+      <dl class="spotlight__details">
+        {% for detail in spotlight.details %}
+          <div><dt>{{ detail.label }}</dt><dd>{{ detail.value }}</dd></div>
+        {% endfor %}
+      </dl>
+      <a class="btn btn--primary" href="{{ spotlight.url | relative_url }}">View shader details <span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </article>
+
   <div class="grid grid--3">
     {% for p in site.data.projects.featured %}
       <a class="card" href="{{ p.url | relative_url }}">
@@ -32,6 +59,8 @@ layout: default
         </div>
         <p class="meta">{{ p.category }}</p>
         <h3 class="card__title">{{ p.title }}</h3>
+        <p class="card__description">{{ p.description }}</p>
+        <p class="card__technologies">{{ p.technologies }}</p>
       </a>
     {% endfor %}
   </div>
@@ -39,7 +68,7 @@ layout: default
 
 <section class="section container">
   <div class="section__head">
-    <h2 class="section__title">Blog Posts</h2>
+    <h2 class="section__title">Writing &amp; breakdowns</h2>
     <a class="section__link" href="{{ '/posts/' | relative_url }}">View all &rarr;</a>
   </div>
   <div class="grid grid--3">

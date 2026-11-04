@@ -14,8 +14,12 @@ toc_sticky: true
 ## Pokémon GO: Keldeo Water Shader
 *2025, HLSL (Unity URP)*
 
-* Water FX: the splash, the ripples, and the reflection.
-* Optimized for mobile.
+The environment was provided; my contribution was the water shader and its effects.
+
+* Built a water shader with character and environment reflections, plus footstep-driven ripples and splashes.
+* Reduced reflection rendering costs for mobile by rendering only Keldeo dynamically and using a static reflection probe for the environment.
+* Generated ripple rings in a separate pass from the collision points where Keldeo’s feet touch the water plane.
+* Overlaid the ripple pass on the water normal map to animate the surface.
 
 {% include gif.html name="keldeo-water-shader" alt="Keldeo water shader in Pokémon GO" width="50%" %}
 
