@@ -1,0 +1,7 @@
+{%- if include.provider == 'google-drive' -%}
+<div class="embed"><iframe src="https://drive.google.com/file/d/{{ include.id }}/preview" allow="autoplay; fullscreen" allowfullscreen loading="lazy" title="Video"></iframe></div>
+{%- elsif include.provider == 'vimeo' -%}
+<div class="embed"><iframe src="https://player.vimeo.com/video/{{ include.id }}" allow="autoplay; fullscreen" allowfullscreen loading="lazy" title="Video"></iframe></div>
+{%- else -%}
+<div class="embed"><iframe src="https://www.youtube-nocookie.com/embed/{{ include.id }}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" title="YouTube video"></iframe></div>
+{%- endif -%}

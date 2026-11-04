@@ -57,7 +57,7 @@ The droplets are as simple as can be: a LineRenderer in the VFX Graph that scale
 
 ![Nodes](/assets/images/posts/02_raindrop-depth-sample-node.png){:width="50%"}
 
-![NormalDepth](/assets/images/posts/02_raindrop-depth-sample-result.gif){:width="50%"}
+{% include gif.html src="/assets/images/posts/02_raindrop-depth-sample-result.gif" alt="NormalDepth" width="50%" %}
 
 ### Splashes
 
@@ -67,13 +67,13 @@ Splashes are a spritesheet particle spawned along the ground with the particle-u
 
 By passing this mask into my VFX graph, I can make my splashes ignore walls. The outline has the added benefit of culling away a bit from the ledges, which solves the half-on-ledge problem as well.
 
-![Splashes](/assets/images/posts/02_splashes.gif)
+{% include gif.html src="/assets/images/posts/02_splashes.gif" alt="Splashes" %}
 
 ### Puddles
 
 The puddles and general wetness in the scene was painted on through vertex color and adjusted by sharpness and fill. This is also influenced by the heightmap of the underlying texture.
 
-![Wetness](/assets/images/posts/02_wetness.gif)
+{% include gif.html src="/assets/images/posts/02_wetness.gif" alt="Wetness" %}
 
 ### Ripples
 
@@ -91,30 +91,29 @@ This function gives a nice ease to the ripple transparency that looks natural.
 
 I also use a population slider that basically compares a `floor(rand(uv))` sample against a threshold value to kill a certain percentage of ripples. A full set of ripples looks strangely uniform anyway, and this gives me control over how torrential I want the rainfall to look.
 
-![RipplePopulation](/assets/images/posts/02_ripple-population.gif)
+{% include gif.html src="/assets/images/posts/02_ripple-population.gif" alt="RipplePopulation" %}
 
 ### Wash Cascades
 
 I saw this effect on a pillar in Overwatch 2, and it felt like a nice, slightly stylized way to evoke water travelling down a lateral surface.
 
-![OW2Cascades](/assets/images/posts/02_water-cascades-overwatch.gif)
+{% include gif.html src="/assets/images/posts/02_water-cascades-overwatch.gif" alt="OW2Cascades" %}
 
 I recreated it in a relatively simple way: generating a mesh at the side of every ledge that water would be washing down on and scrolling a voronoi + clouds texture along the Y of the UV.
 Here is the effect with exaggurated visibility.
 
-![OW2Cascades](/assets/images/posts/02_water-cascades.gif)
+{% include gif.html src="/assets/images/posts/02_water-cascades.gif" alt="OW2Cascades" %}
 
 ### Mist
 
 Finally, the mist is scrolling noise with a depth mask in order to keep it closely hugging the ground.
 Here is the effect with exaggurated visibility.
 
-![Mist](/assets/images/posts/02_mist.gif)
+{% include gif.html src="/assets/images/posts/02_mist.gif" alt="Mist" %}
 
 ### Conclusion
 
 Thank you for reading my breakdown! This was a fun project that challenged me to use the information I had at hand in interesting ways. Making a tribute to my home state felt satisfying, and I feel well-equipped to use ortho-camera depth sampling techniques for various other effects.
 
-![FinalGif](/assets/images/portfolio/swallow-falls-rain.gif)
+{% include gif.html src="/assets/images/portfolio/swallow-falls-rain.gif" alt="FinalGif" %}
 
-Follow me [@wheatpenguin](https://twitter.com/wheatpenguin) on Twitter.

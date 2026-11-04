@@ -1,0 +1,6 @@
+{%- comment -%} Sets `thumb` for include.post: header image → teaser → first <img> in the post. {%- endcomment -%}
+{%- assign thumb = include.post.header.overlay_image | default: include.post.header.teaser -%}
+{%- unless thumb -%}
+  {%- assign parts = include.post.content | split: '<img src="' -%}
+  {%- if parts.size > 1 -%}{%- assign thumb = parts[1] | split: '"' | first -%}{%- endif -%}
+{%- endunless -%}

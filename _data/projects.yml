@@ -1,0 +1,37 @@
+# Homepage content. Titles match the section headings on the portfolio pages.
+# `media` is a file name in assets/images/portfolio (without .gif); a matching
+# assets/video/<media>.mp4 + .jpg poster are used when present.
+
+disciplines:
+  - title: "Tech Art & Graphics"
+    url: /graphics/
+    media: keldeo-water-shader
+  - title: "Tools Development"
+    url: /toolsdev/
+    media: personal-channel-packer-tool
+
+featured:
+  - title: "Pokémon GO: Keldeo Water Shader"
+    category: "Tech Art & Graphics"
+    url: /graphics/#pokémon-go-keldeo-water-shader
+    media: keldeo-water-shader
+  - title: "SPOOKULELE: Frame Data Editor & Visualizer"
+    category: "Tools Development"
+    url: /toolsdev/#spookulele-frame-data-editor--visualizer
+    media: spookulele-frame-data-editor-1
+  - title: "Rain Visual Effect"
+    category: "Tech Art & Graphics"
+    url: /realtime-rain-vfx-breakdown/
+    media: swallow-falls-rain
+  - title: "Grandma Green: Audio Tool"
+    category: "Tools Development"
+    url: /toolsdev/#grandma-green-audio-tool
+    media: grandma-green-audio-tool
+  - title: "SPOOKULELE: Character Ubershader"
+    category: "Tech Art & Graphics"
+    url: /graphics/#spookulele-character-ubershader
+    media: spookulele-character-shader-1
+  - title: "SPOOKULELE: Procedural Animation"
+    category: "Tech Art & Graphics"
+    url: /graphics/#spookulele-procedural-animation
+    media: spookulele-procedural-animation-1

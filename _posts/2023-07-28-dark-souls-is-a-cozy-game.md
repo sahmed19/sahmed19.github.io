@@ -1,4 +1,5 @@
 ---
+published: false
 title:  "*Dark Souls* is a cozy game, actually"
 date:   2023-07-28 10:35:00 +0800
 tags:
@@ -70,10 +71,9 @@ I don’t wish to cast judgment on artists creating what they want to create, bu
 
 Or, if you’ve gotten this far and want nothing more to do with cozy games, please try my favorite hardcore survival-horror strategy game, Pikmin.
 
-![](/assets/images/posts/03_pikmin.gif){: .align-center }
+{% include gif.html src="/assets/images/posts/03_pikmin.gif" class="align-center" %}
 
 Special thanks to  [Bethany Lai](https://www.linkedin.com/in/bethanylai/), [Weston Bell-Geddes](https://www.westonb.dev/) & [Jebby Zhang](https://www.jebbyzhang.com/) for helping me edit this post.
 
-Follow me [@wheatpenguin](https://twitter.com/wheatpenguin) on Twitter.
 
 ---

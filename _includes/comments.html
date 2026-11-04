@@ -1,0 +1,10 @@
+{%- if site.comments.provider == 'utterances' and page.comments -%}
+<section class="comments container container--prose" aria-label="Comments">
+  <script src="https://utteranc.es/client.js"
+          repo="{{ site.comments.utterances.repo }}"
+          issue-term="{{ site.comments.utterances.issue_term }}"
+          label="{{ site.comments.utterances.label }}"
+          theme="{{ site.comments.utterances.theme }}"
+          crossorigin="anonymous" async></script>
+</section>
+{%- endif -%}

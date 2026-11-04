@@ -143,5 +143,4 @@ For the IMGUI visualizer, there are a couple next steps I have in mind.
 
 Thanks for reading! School starts in a couple days but I'll try to continue this side project as well as I can.
 
-Follow me [@wheatpenguin](https://twitter.com/wheatpenguin) on Twitter.
 Check out [this project repo on Github.](https://github.com/sahmed19/ProjectMono)

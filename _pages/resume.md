@@ -1,7 +1,13 @@
 ---
 title: "Resume"
 permalink: /resume/
-author_profile: true
+wide: true
 ---
 
-<object data="/assets/docs/sheehan_ahmed_resume_graphics.pdf" width="1200" height="1000" type='application/pdf'></object>
+<div class="resume-actions">
+  <a class="btn btn--primary" href="/assets/docs/sheehan_ahmed_resume_graphics.pdf" download>Download resume (PDF)</a>
+</div>
+
+<object class="pdf-embed" data="/assets/docs/sheehan_ahmed_resume_graphics.pdf" type="application/pdf">
+  <p>Your browser can't display PDFs inline. <a href="/assets/docs/sheehan_ahmed_resume_graphics.pdf">Download the resume</a> instead.</p>
+</object>

@@ -1,22 +1,50 @@
 ---
-layout: archive
+layout: default
 ---
+<section class="intro container">
+  <h1 class="sr-only">{{ site.author.name }}, {{ site.role }}</h1>
+  <ul class="social social--intro">
+    {% for s in site.social %}
+      <li><a href="{{ s.url }}" rel="me noopener" target="_blank">{% include icon.html name=s.icon %}<span>{{ s.label }}</span></a></li>
+    {% endfor %}
+    <li><a href="{{ '/resume/' | relative_url }}">{% include icon.html name='download' %}<span>Resume</span></a></li>
+  </ul>
+</section>
 
-{{ content }}
+<section class="section container">
+  <div class="grid grid--2">
+    {% for d in site.data.projects.disciplines %}
+      <a class="card" href="{{ d.url | relative_url }}">
+        <div class="card__media card__media--tall">{% include media.html name=d.media alt=d.title %}</div>
+        <h2 class="card__title card__title--lg">{{ d.title }}</h2>
+      </a>
+    {% endfor %}
+  </div>
+</section>
 
-<h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
+<section class="section container">
+  <h2 class="section__title">Selected work</h2>
+  <div class="grid grid--3">
+    {% for p in site.data.projects.featured %}
+      <a class="card" href="{{ p.url | relative_url }}">
+        <div class="card__media">
+          {% include media.html name=p.media alt=p.title dir=p.media_dir %}
+        </div>
+        <p class="meta">{{ p.category }}</p>
+        <h3 class="card__title">{{ p.title }}</h3>
+      </a>
+    {% endfor %}
+  </div>
+</section>
 
-{% if paginator %}
-  {% assign posts = paginator.posts %}
-{% else %}
-  {% assign posts = site.posts %}
-{% endif %}
-
-{% assign entries_layout = page.entries_layout | default: 'list' %}
-<div class="entries-{{ entries_layout }}">
-  {% for post in posts %}
-    {% include archive-single.html type=entries_layout %}
-  {% endfor %}
-</div>
-
-{% include paginator.html %}
+<section class="section container">
+  <div class="section__head">
+    <h2 class="section__title">Blog Posts</h2>
+    <a class="section__link" href="{{ '/posts/' | relative_url }}">View all &rarr;</a>
+  </div>
+  <div class="grid grid--3">
+    {% for post in site.posts limit: 3 %}
+      {% include post-card.html post=post %}
+    {% endfor %}
+  </div>
+</section>

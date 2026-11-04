@@ -3,7 +3,6 @@ permalink: /graphics/
 title: "Tech Art & Graphics"
 toc: true
 toc_sticky: true
-author_profile: false
 
 ---
 
@@ -11,6 +10,14 @@ author_profile: false
 
 - Software: Unity, Unreal Engine, Blender, Maya, Substance 3D Suite
 - Languages: HLSL/GLSL, ShaderGraph, Amplify SE, Unreal Material Editor, C#, C++, Python, PyQt
+
+## Pokémon GO: Keldeo Water Shader
+*2025, HLSL (Unity URP)*
+
+* Water FX: the splash, the ripples, and the reflection.
+* Optimized for mobile.
+
+{% include gif.html name="keldeo-water-shader" alt="Keldeo water shader in Pokémon GO" width="50%" %}
 
 ## SPOOKULELE: Environment Art (WIP)
 *2023, Unreal*
@@ -30,14 +37,14 @@ author_profile: false
 ## Rain Visual Effect
 *2023, HLSL, VFX Graph & ShaderGraph (Unity URP)*
 
-![FinalGif](/assets/images/portfolio/swallow-falls-rain.gif)
+{% include gif.html src="/assets/images/portfolio/swallow-falls-rain.gif" alt="FinalGif" %}
 
 [Read the breakdown blogpost here.](https://www.sheehanahmed.com/realtime-rain-vfx-breakdown/)
 
 ## Shadertoy Raycaster
 *2022, GLSL*
 
-![](/assets/images/portfolio/shadertoy-raycaster.gif){:width="75%"}
+{% include gif.html src="/assets/images/portfolio/shadertoy-raycaster.gif" width="75%" %}
 
 Done as part of a Blizzard graphics test. I implemented:
 * Point & directional lighting with PBR reflectance and normal mapping
@@ -51,7 +58,7 @@ Done as part of a Blizzard graphics test. I implemented:
 
 Stylized Lighting            |  Aniso Hair & POM Eyes          |  Character FX
 :-------------------------:|:-------------------------:|:-------------------------:
-![](/assets/images/portfolio/spookulele-character-shader-1.gif) | ![](/assets/images/portfolio/spookulele-character-shader-2.gif) | ![](/assets/images/portfolio/spookulele-character-shader-3.gif)
+{% include gif.html src="/assets/images/portfolio/spookulele-character-shader-1.gif" %} | {% include gif.html src="/assets/images/portfolio/spookulele-character-shader-2.gif" %} | {% include gif.html src="/assets/images/portfolio/spookulele-character-shader-3.gif" %}
 
 
 Created to handle all character materials in SPOOKULELE.
@@ -63,11 +70,11 @@ Created to handle all character materials in SPOOKULELE.
 ## SPOOKULELE: Procedural Animation
 *2021, C#, HLSL*
 
-![](/assets/images/portfolio/spookulele-procedural-animation-1.gif)
+{% include gif.html src="/assets/images/portfolio/spookulele-procedural-animation-1.gif" %}
 
 Head Tracking            |  Blinking          |  Voice-controlled lighting
 :-------------------------:|:-------------------------:|:-------------------------:
-![](/assets/images/portfolio/spookulele-procedural-animation-2.gif) | ![](/assets/images/portfolio/spookulele-procedural-animation-3.gif) | ![](/assets/images/portfolio/spookulele-procedural-animation-4.gif)
+{% include gif.html src="/assets/images/portfolio/spookulele-procedural-animation-2.gif" %} | {% include gif.html src="/assets/images/portfolio/spookulele-procedural-animation-3.gif" %} | {% include gif.html src="/assets/images/portfolio/spookulele-procedural-animation-4.gif" %}
 
 
 ## BLOOMPUNK: Environment Set Dress & Lighting
@@ -79,8 +86,8 @@ Head Tracking            |  Blinking          |  Voice-controlled lighting
 ![](https://cdna.artstation.com/p/assets/images/images/062/971/888/large/sheehan-ahmed-bp-pf-01.jpg?1684380933)
 ![](https://cdnb.artstation.com/p/assets/images/images/062/971/889/large/sheehan-ahmed-bp-pf-02.jpg?1684380944)
 
-![](https://cdna.artstation.com/p/assets/images/images/062/971/842/original/sheehan-ahmed-bp-gif01.gif?1684380786)
-![](https://cdnb.artstation.com/p/assets/images/images/062/971/845/original/sheehan-ahmed-bp-gif02.gif?1684380796)
+{% include gif.html name="bloompunk-set-dress-1" %}
+{% include gif.html name="bloompunk-set-dress-2" %}
 
 [For more, see the Artstation here.](https://www.artstation.com/artwork/OGwmy8)
 
@@ -91,26 +98,26 @@ Vango is a ranged, shielded enemy. I modelled, rigged and animated the Vango ani
 
 **Rig Breakdown**
 
-![](/assets/images/portfolio/spookulele-vango-rig-breakdown.gif){:width="50%"}
+{% include gif.html src="/assets/images/portfolio/spookulele-vango-rig-breakdown.gif" width="50%" %}
 
 **Walk Cycle**
 
-![](/assets/images/portfolio/spookulele-vango-walk.gif){:width="75%"}
+{% include gif.html src="/assets/images/portfolio/spookulele-vango-walk.gif" width="75%" %}
 
 **Prepare to Shoot**
 
-![](/assets/images/portfolio/spookulele-vango-shoot.gif){:width="75%"}
+{% include gif.html src="/assets/images/portfolio/spookulele-vango-shoot.gif" width="75%" %}
 
 **Knock-up & Topple**
 
-![](/assets/images/portfolio/spookulele-vango-knock-up.gif){:width="75%"}
+{% include gif.html src="/assets/images/portfolio/spookulele-vango-knock-up.gif" width="75%" %}
 
 <!---
 ## House-builder: Painting UV Manipulation
 
 *House-builder* is an in-progress game about creating and decorating home interiors.
 
-![](/assets/images/portfolio/housebuilder-painting-resizer.gif)
+{% include gif.html src="/assets/images/portfolio/housebuilder-painting-resizer.gif" %}
 
 I implemented a painting asset that features custom images with stretch, tile, and fit modes. This utilizes an enum shader keyword to switch between the separate modes. In order to preserve the aspect ratio of the source image, I store the width and height ratio in the UV2 of each painting mesh.
 

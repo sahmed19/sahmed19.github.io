@@ -14,7 +14,7 @@ excerpt: ""
 ---
 I've been playing Intelligent Systems' *Fire Emblem* games recently. It's hard not to appreciate how the tactical movement gives depth and immersion to a Game Map that's visually just a handful of pixels compared to modern game landscapes like *Red Dead Redemption 2* or *Breath of the Wild*. Considering units' positioning down to choices between adjacent grid cells gets a player intimately engaging with the game environment.
 
-![Fire Emblem Gameplay](/assets/images/posts/04_blazing-blade.gif){: .align-center}
+{% include gif.html src="/assets/images/posts/04_blazing-blade.gif" alt="Fire Emblem Gameplay" class="align-center" %}
 
 Notice that when the player selects a unit to move them, it displays a grid. This grid depicts grid cells the player can move to in blue, and grid cells they can attack in red. This display is integral to the strategy of *Fire Emblem*, as it gives the player a clear yet informative summary of their tactical options.
 
@@ -263,7 +263,7 @@ for(int i = 0; i < movementRange; i++)
 
 And... the result:
 
-![](/assets/images/posts/04_movement-vis.gif){: .align-center}
+{% include gif.html src="/assets/images/posts/04_movement-vis.gif" class="align-center" %}
 
 Although the above gif is slowed down for clarity, the actual algorithm runs lightning fast. For expected use-cases of Movement Ranges under 32, I consistently get <0.2ms of total runtime.
 
@@ -271,7 +271,7 @@ Although the above gif is slowed down for clarity, the actual algorithm runs lig
 
 We're over the hard part, but still need the attack ranges. These are the little red squares that show how far a Unit can attack if they move to the very edge of their Movement Range. 
 
-![Fire Emblem Gameplay](/assets/images/posts/04_blazing-blade.gif){: .align-center}
+{% include gif.html src="/assets/images/posts/04_blazing-blade.gif" alt="Fire Emblem Gameplay" class="align-center" %}
 
 Luckily, this is quite simple. Since the Attack Range ignores Movement Cost and walls, we don't need to do any pathfinding of any sort. Instead, we will convolve the G channel of the Reverse Dijkstra result with an expansion formula, using the same plus-shaped kernel.
 
@@ -294,13 +294,13 @@ This will simply take any pixel with a value greater than 0.5 and set the neighb
 
 </details>
 
-![Expansion](/assets/images/posts/04_expansion.gif){: .align-center}
+{% include gif.html src="/assets/images/posts/04_expansion.gif" alt="Expansion" class="align-center" %}
 
 Perfect! Now the effect is complete.
 
 ### Conclusion
 
-![Expansion](/assets/images/posts/04_final.gif){: .align-center}
+{% include gif.html src="/assets/images/posts/04_final.gif" alt="Expansion" class="align-center" %}
 
 Here is the demonstration of the final effect.
 
@@ -309,8 +309,7 @@ In the future for my tactics side-project, I'll add:
 - Pretty in-game shader to display this grid to the player
 - Arrow tracing player start to destination
 
-Thank you for reading my blog. If you were impressed and are an employer, consider hiring me as a Graphics Programmer ([My LinkedIn](https://www.linkedin.com/in/sheehan-ahmed-94136b192/)).
+Thank you for reading my blog. If you were impressed and are an employer, consider hiring me as a Technical Artist ([My LinkedIn](https://www.linkedin.com/in/sheehan-ahmed-94136b192/)).
 
-Otherwise, follow me [@wheatpenguin](https://twitter.com/wheatpenguin) on Twitter.
 
 ---

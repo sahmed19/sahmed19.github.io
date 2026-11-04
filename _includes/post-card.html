@@ -1,0 +1,9 @@
+{%- include post-thumb.html post=include.post -%}
+{%- assign words = include.post.content | strip_html | number_of_words -%}
+<a class="card" href="{{ include.post.url | relative_url }}">
+  <div class="card__media">
+    {%- if thumb -%}<img src="{{ thumb | relative_url }}" alt="" loading="lazy">{%- endif -%}
+  </div>
+  <p class="meta">{{ include.post.date | date: '%B %-d, %Y' }} · {{ words | divided_by: 200 | plus: 1 }} min read</p>
+  <h3 class="card__title">{{ include.post.title | markdownify | remove: '<p>' | remove: '</p>' | strip }}</h3>
+</a>

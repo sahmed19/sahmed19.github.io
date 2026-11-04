@@ -1,5 +1,6 @@
 ---
 title:  "Video games aren’t cool anymore (and Japan can’t save us) [DRAFT]"
+published: false
 date:   2025-03-29 02:00:00 +0800
 tags:
   - life
@@ -164,4 +165,3 @@ And you, non-artists who have gotten this far. Poptimisim is over, okay? Start m
 Godspeed! Go live life and make masterpieces that only seasoned, interesting, *cool* people can craft!
 
 
-*Follow me [@wheatpenguin](https://twitter.com/wheatpenguin) on Twitter.*

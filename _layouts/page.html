@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<article class="page{% if page.toc %} has-toc{% endif %}{% if page.wide %} is-wide{% endif %}">
+  <header class="page-head container">
+    <span class="ghost" aria-hidden="true">{{ page.title | markdownify | strip_html | strip }}</span>
+    <h1 class="page-head__title">{{ page.title | markdownify | remove: '<p>' | remove: '</p>' | strip }}</h1>
+    {% if page.excerpt and page.excerpt != '' %}<p class="page-head__lede">{{ page.excerpt }}</p>{% endif %}
+  </header>
+  <div class="container article-layout">
+    <div class="prose" data-prose>
+      {{ content }}
+    </div>
+    {% if page.toc %}{% include toc.html %}{% endif %}
+  </div>
+</article>

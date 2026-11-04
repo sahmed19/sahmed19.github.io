@@ -1,0 +1,22 @@
+<header class="site-header" data-header>
+  <div class="container site-header__inner">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <span class="brand__name">{{ site.title }}</span>
+      <span class="brand__role">{{ site.role }}</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+      <span class="sr-only">Menu</span>
+      <span class="nav-toggle__bar"></span><span class="nav-toggle__bar"></span>
+    </button>
+    <nav class="site-nav" id="site-nav" data-nav>
+      <ul>
+        {% for link in site.data.navigation.main %}
+          {% assign active = false %}
+          {% if page.url == link.url %}{% assign active = true %}{% endif %}
+          {% if link.url == '/posts/' and page.collection == 'posts' %}{% assign active = true %}{% endif %}
+          <li><a href="{{ link.url | relative_url }}"{% if active %} aria-current="page"{% endif %}>{{ link.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>
