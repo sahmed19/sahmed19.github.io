@@ -4,34 +4,26 @@ layout: default
 <section class="intro container">
   <h1 class="intro__title">Technical art &amp; tools.</h1>
   <ul class="social social--intro">
-      {% for s in site.social %}
-        <li><a href="{{ s.url }}" rel="me noopener" target="_blank">{% include icon.html name=s.icon %}<span>{{ s.label }}</span></a></li>
-      {% endfor %}
-      <li><a href="{{ '/resume/' | relative_url }}">{% include icon.html name='download' %}<span>Resume</span></a></li>
+    {% for s in site.social %}
+      <li><a href="{{ s.url }}" rel="me noopener" target="_blank">{% include icon.html name=s.icon %}<span>{{ s.label }}</span></a></li>
+    {% endfor %}
+    <li><a href="{{ '/resume/' | relative_url }}">{% include icon.html name='download' %}<span>Resume</span></a></li>
   </ul>
 </section>
 
-<section class="section container" id="work" aria-labelledby="work-title">
+<section class="section container" id="work" aria-labelledby="work-title" tabindex="-1">
   <h2 class="section__title" id="work-title">Selected work</h2>
-  <nav class="work-nav" aria-label="Portfolio disciplines">
-    {% for d in site.data.projects.disciplines %}
-      <a class="work-nav__link" href="{{ d.url | relative_url }}">
-        <span class="work-nav__title">{{ d.title }} <span aria-hidden="true">&nearr;</span></span>
-      </a>
-    {% endfor %}
-  </nav>
-
   {% assign spotlight = site.data.projects.spotlight %}
-  <article class="spotlight" aria-labelledby="spotlight-title">
+  <a class="spotlight" href="{{ spotlight.url | relative_url }}" aria-labelledby="spotlight-title">
     <div class="spotlight__media">
       {% include media.html name=spotlight.media alt=spotlight.alt %}
     </div>
     <div class="spotlight__copy">
       <h3 class="spotlight__title" id="spotlight-title">{{ spotlight.title }}</h3>
       <p class="spotlight__description">{{ spotlight.description }}</p>
-      <a class="spotlight__link" href="{{ spotlight.url | relative_url }}">View project <span aria-hidden="true">&rarr;</span></a>
+      <span class="spotlight__link">View project <span aria-hidden="true">&rarr;</span></span>
     </div>
-  </article>
+  </a>
 
   <div class="grid grid--3">
     {% for p in site.data.projects.featured %}
@@ -43,6 +35,14 @@ layout: default
       </a>
     {% endfor %}
   </div>
+
+  <nav class="work-nav" aria-label="Portfolio disciplines">
+    {% for d in site.data.projects.disciplines %}
+      <a class="work-nav__link" href="{{ d.url | relative_url }}">
+        <span class="work-nav__title">{{ d.title }} <span aria-hidden="true">&rarr;</span></span>
+      </a>
+    {% endfor %}
+  </nav>
 </section>
 
 <section class="section container">

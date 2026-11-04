@@ -29,18 +29,37 @@
   var toggle = document.querySelector("[data-nav-toggle]");
   var nav = document.querySelector("[data-nav]");
   if (toggle && nav) {
+    var mobileNav = window.matchMedia("(max-width: 900px)");
+    var menuLabel = toggle.querySelector(".sr-only");
     var setOpen = function (open) {
       toggle.setAttribute("aria-expanded", String(open));
       nav.classList.toggle("is-open", open);
+      if (menuLabel) menuLabel.textContent = open ? "Close menu" : "Menu";
     };
     toggle.addEventListener("click", function () { setOpen(toggle.getAttribute("aria-expanded") !== "true"); });
-    document.addEventListener("keydown", function (e) { if (e.key === "Escape") setOpen(false); });
-    nav.addEventListener("click", function (e) { if (e.target.closest("a")) setOpen(false); });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && toggle.getAttribute("aria-expanded") === "true") {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+    document.addEventListener("click", function (e) { if (!header.contains(e.target)) setOpen(false); });
+    document.addEventListener("focusin", function (e) { if (!header.contains(e.target)) setOpen(false); });
+    mobileNav.addEventListener("change", function () { setOpen(false); });
+    nav.addEventListener("click", function (e) {
+      var link = e.target.closest("a");
+      if (!link) return;
+      setOpen(false);
+      if (link.pathname === window.location.pathname && link.hash) {
+        var target = document.getElementById(decodeURIComponent(link.hash.slice(1)));
+        if (target) target.focus({ preventScroll: true });
+      }
+    });
   }
 
   // Preview videos: play while on screen, pause when off. Reduced motion shows the poster only.
   var videos = document.querySelectorAll("video[data-autoplay]");
-  if (reduceMotion) videos.forEach(function (v) { v.controls = true; });
+  if (reduceMotion) videos.forEach(function (v) { v.controls = !v.closest("a"); });
   if (videos.length && !reduceMotion && "IntersectionObserver" in window) {
     var vio = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
