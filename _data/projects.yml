@@ -5,59 +5,32 @@
 disciplines:
   - title: "Tech Art & Graphics"
     url: /graphics/
-    description: "Shaders, real-time visual effects, and procedural animation."
   - title: "Tools Development"
     url: /toolsdev/
-    description: "Editor extensions and workflows for artists, designers, and audio teams."
 
 spotlight:
   title: "Pokémon GO: Keldeo Water Shader"
-  category: "Featured project · 2025"
   url: /graphics/#pokémon-go-keldeo-water-shader
   media: keldeo-water-shader
   alt: "Keldeo standing in water with ripples and reflections in Pokémon GO"
-  description: "A mobile water shader with reflections, ripples, and splashes that respond to Keldeo’s footsteps. Dynamic character reflections combine with a static environment probe to keep rendering costs down."
-  credit: "Environment provided; water shader and effects by me."
-  details:
-    - label: "Built with"
-      value: "HLSL · Unity URP"
-    - label: "Focus"
-      value: "Water effects · Mobile rendering"
+  description: "Mobile water shader with reflections, ripples, and splashes."
 
 featured:
   - title: "Rain Visual Effect"
-    category: "Tech Art & Graphics"
     url: /realtime-rain-vfx-breakdown/
     media: swallow-falls-rain
-    description: "Depth-driven rain, splashes, and puddles that respond to the environment, with a full technical breakdown."
-    technologies: "HLSL · VFX Graph · Unity URP"
   - title: "SPOOKULELE: Character Ubershader"
-    category: "Tech Art & Graphics"
     url: /graphics/#spookulele-character-ubershader
     media: spookulele-character-shader-1
-    description: "A shared character shader with subsurface lighting, anisotropic hair, parallax eyes, and character effects."
-    technologies: "HLSL · Amplify Shader Editor"
   - title: "SPOOKULELE: Procedural Animation"
-    category: "Tech Art & Graphics"
     url: /graphics/#spookulele-procedural-animation
     media: spookulele-procedural-animation-1
-    description: "Head tracking, blinking, and voice-controlled lighting for SPOOKULELE’s characters."
-    technologies: "C# · HLSL"
   - title: "SPOOKULELE: Frame Data Editor & Visualizer"
-    category: "Tools Development"
     url: /toolsdev/#spookulele-frame-data-editor--visualizer
     media: spookulele-frame-data-editor-1
-    description: "A Unity editor tool for tuning attack timing, hitboxes, and on-hit effects without recompiling."
-    technologies: "C# · Unity Editor"
   - title: "Grandma Green: Audio Tool"
-    category: "Tools Development"
     url: /toolsdev/#grandma-green-audio-tool
     media: grandma-green-audio-tool
-    description: "A Unity editor tool that lets the audio team iterate on sound assets directly in the engine."
-    technologies: "C# · Unity Editor"
   - title: "Channel Packer Tool"
-    category: "Tools Development"
     url: /toolsdev/#personal-channel-packer-tool
     media: personal-channel-packer-tool
-    description: "A desktop tool for packing texture channels into masks for PBR materials and visual effects."
-    technologies: "Python · PyQt"
