@@ -80,6 +80,6 @@ comments:
   provider: "utterances"
   utterances:
     repo: sahmed19/sahmed19.github.io
-    theme: "github-light"
+    theme: "github-dark"
     issue_term: "pathname"
     label: "comment"
