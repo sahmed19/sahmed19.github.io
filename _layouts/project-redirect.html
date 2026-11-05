@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, follow">
+  <title>Projects — {{ site.title }}</title>
+  {% assign destination = '/' %}
+  {% if page.project_id %}{% assign destination = destination | append: '#' | append: page.project_id %}{% endif %}
+  <link rel="canonical" href="{{ destination | absolute_url }}">
+  <script>
+    (function () {
+      var destinations = {
+        {% assign projects = site.data.projects.catalog %}
+        {% unless page.preserve_project_hash %}{% assign projects = projects | where: 'source', page.legacy_category %}{% endunless %}
+        {% for project in projects %}
+          {% if page.preserve_project_hash %}{{ project.id | jsonify }}{% else %}{{ project.anchor | jsonify }}{% endif %}: {{ project.url | relative_url | jsonify }}{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+      };
+      var anchor = window.location.hash.slice(1);
+      try { anchor = decodeURIComponent(anchor); } catch (e) {}
+      window.location.replace(destinations[anchor] || {{ destination | relative_url | jsonify }});
+    })();
+  </script>
+  <noscript><meta http-equiv="refresh" content="0; url={{ destination | relative_url }}"></noscript>
+</head>
+<body><p>The portfolio has moved. <a href="{{ destination | relative_url }}">Browse all projects.</a></p></body>
+</html>

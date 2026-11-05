@@ -1,36 +1,226 @@
-# Homepage content. Titles match the section headings on the portfolio pages.
-# `media` is a file name in assets/images/portfolio (without .gif); a matching
-# assets/video/<media>.mp4 + .jpg poster are used when present.
-
-disciplines:
-  - title: "Tech Art & Graphics"
-    url: /graphics/
-  - title: "Tools Development"
-    url: /toolsdev/
-
-spotlight:
-  title: "Pokémon GO: Keldeo Water Shader"
-  url: /graphics/#pokémon-go-keldeo-water-shader
-  media: keldeo-water-shader
-  alt: "Keldeo standing in water with ripples and reflections in Pokémon GO"
-  description: "Mobile water shader with reflections, ripples, and splashes."
-
-featured:
-  - title: "Rain Visual Effect"
-    url: /realtime-rain-vfx-breakdown/
-    media: swallow-falls-rain
-  - title: "SPOOKULELE: Character Ubershader"
-    url: /graphics/#spookulele-character-ubershader
-    media: spookulele-character-shader-1
-  - title: "SPOOKULELE: Procedural Animation"
-    url: /graphics/#spookulele-procedural-animation
-    media: spookulele-procedural-animation-1
-  - title: "SPOOKULELE: Frame Data Editor & Visualizer"
-    url: /toolsdev/#spookulele-frame-data-editor--visualizer
-    media: spookulele-frame-data-editor-1
-  - title: "Grandma Green: Audio Tool"
-    url: /toolsdev/#grandma-green-audio-tool
-    media: grandma-green-audio-tool
-  - title: "Channel Packer Tool"
-    url: /toolsdev/#personal-channel-packer-tool
-    media: personal-channel-packer-tool
+# Project metadata and ordering for the scrollable homepage portfolio.
+catalog:
+  - id: keldeo-water-shader
+    title: "Keldeo Water Shader"
+    context: "Pokémon GO"
+    role: "Shader development"
+    year: "2025"
+    stack: ["Unity URP", "HLSL"]
+    media: "keldeo-water-shader"
+    alt: "Keldeo standing in reflective water with ripples and splashes"
+    description: "Character reflections and footstep-driven ripples, with a reflection strategy designed for mobile."
+    source: "graphics"
+    anchor: "pokémon-go-keldeo-water-shader"
+    portrait: true
+    url: "/#keldeo-water-shader"
+  - id: frame-data-editor
+    media_layout: stacked
+    title: "Frame Data Editor & Visualizer"
+    context: "SPOOKULELE"
+    role: "Editor tool development"
+    stack: ["Unity Editor", "C#"]
+    media: "spookulele-frame-data-editor-1"
+    alt: "Unity editor showing editable attack frame data alongside the game"
+    description: "Tune attack timing, hitboxes, and on-hit effects in Unity with immediate in-game feedback."
+    source: "toolsdev"
+    anchor: "spookulele-frame-data-editor--visualizer"
+    gallery:
+      - media: "spookulele-frame-data-editor-2"
+        caption: "On-hit effects"
+        alt: "Editing attack knockback and screenshake in the Unity editor"
+      - media: "spookulele-frame-data-editor-3"
+        caption: "Hitboxes & frame stepping"
+        alt: "Enemy profiling, hitbox visualization, and frame stepping"
+    url: "/#frame-data-editor"
+  - id: rain-vfx
+    title: "Rain Visual Effect"
+    role: "Real-time VFX & shaders"
+    year: "2023"
+    stack: ["Unity URP", "VFX Graph", "HLSL"]
+    media: "swallow-falls-rain"
+    alt: "Rain, ground splashes, and wet surfaces in a real-time courtyard scene"
+    description: "A layered rain effect combining particles, depth-based splashes, surface ripples, and wetness."
+    source: "graphics"
+    anchor: "rain-visual-effect"
+    url: "/#rain-vfx"
+  - id: character-ubershader
+    title: "Character Ubershader"
+    context: "SPOOKULELE"
+    role: "Character shader development"
+    year: "2021"
+    stack: ["Unity URP", "HLSL", "Amplify"]
+    media: "spookulele-character-shader-1"
+    alt: "Stylized character lighting and materials in SPOOKULELE"
+    description: "A shared character shader for stylized lighting, anisotropic hair, parallax eyes, and gameplay effects."
+    source: "graphics"
+    anchor: "spookulele-character-ubershader"
+    gallery:
+      - media: "spookulele-character-shader-2"
+        caption: "Anisotropic hair & parallax eyes"
+        alt: "Anisotropic hair shading and parallax occlusion mapped eyes"
+      - media: "spookulele-character-shader-3"
+        caption: "Character effects"
+        alt: "Character shader effects including flashes and disintegration"
+    url: "/#character-ubershader"
+  - id: procedural-animation
+    title: "Procedural Animation"
+    context: "SPOOKULELE"
+    role: "Procedural animation development"
+    year: "2021"
+    stack: ["Unity", "C#", "HLSL"]
+    media: "spookulele-procedural-animation-1"
+    alt: "SPOOKULELE character demonstrating procedural animation"
+    description: "Character behaviors including head tracking, blinking, and voice-controlled lighting."
+    source: "graphics"
+    anchor: "spookulele-procedural-animation"
+    gallery:
+      - media: "spookulele-procedural-animation-2"
+        caption: "Head tracking"
+        alt: "Character turning its head to track a target"
+      - media: "spookulele-procedural-animation-3"
+        caption: "Blinking"
+        alt: "Procedural character blinking"
+      - media: "spookulele-procedural-animation-4"
+        caption: "Voice-controlled lighting"
+        alt: "Voice-controlled character lighting"
+    url: "/#procedural-animation"
+  - id: audio-tool
+    title: "Audio Tool"
+    context: "Grandma Green"
+    role: "Editor tool development"
+    stack: ["Unity Editor", "C#"]
+    media: "grandma-green-audio-tool"
+    alt: "Grandma Green audio authoring tool inside the Unity editor"
+    description: "An in-engine audio workflow that lets the sound team iterate on assets, inspired by Wwise."
+    source: "toolsdev"
+    anchor: "grandma-green-audio-tool"
+    url: "/#audio-tool"
+  - id: channel-packer
+    title: "Channel Packer"
+    role: "Desktop tool development"
+    stack: ["Python", "PyQt"]
+    media: "personal-channel-packer-tool"
+    alt: "Desktop texture channel packing tool with individual channel previews"
+    description: "Combine texture channels into packed masks for PBR materials and VFX textures."
+    source: "toolsdev"
+    anchor: "personal-channel-packer-tool"
+    url: "/#channel-packer"
+  - id: shadertoy-raycaster
+    title: "Shadertoy Raycaster"
+    role: "Rendering implementation"
+    year: "2022"
+    stack: ["GLSL", "Shadertoy"]
+    media: "shadertoy-raycaster"
+    alt: "Raycast scene with lighting, shadows, and reflections"
+    description: "PBR lighting, normal mapping, reflections, directional shadows, and bloom in a GLSL raycaster."
+    source: "graphics"
+    anchor: "shadertoy-raycaster"
+    url: "/#shadertoy-raycaster"
+  - id: grandma-green-dialogue
+    title: "Dialogue Pipeline"
+    context: "Grandma Green"
+    role: "Narrative pipeline development"
+    stack: ["Python", "PyQt", "Yarn"]
+    media: "grandma-green-dialogue-tool"
+    alt: "Tool converting the narrative team’s spreadsheet dialogue into game files"
+    description: "Convert the narrative team’s shared Google Sheets into game-compatible Yarn dialogue files."
+    source: "toolsdev"
+    anchor: "grandma-green-dialogue-tool"
+    url: "/#grandma-green-dialogue"
+  - id: left-on-read-dialogue
+    media_layout: stacked
+    title: "Dialogue Tool"
+    context: "Left on Read"
+    role: "Dialogue system development"
+    stack: ["Unity", "C#"]
+    media: "left-on-read-1"
+    alt: "Text conversations and platforming gameplay in Left on Read"
+    description: "Writer-controlled texting behaviors, including pauses, deletions, rewrites, and custom events."
+    source: "toolsdev"
+    anchor: "left-on-read-dialogue-tool"
+    credit: "Gameplay footage: Crank Gameplays"
+    gallery:
+      - image: "/assets/images/portfolio/left-on-read-2.png"
+        width: 1074
+        height: 748
+        caption: "Writing conversations"
+        alt: "Dialogue authoring for Left on Read"
+      - image: "/assets/images/portfolio/left-on-read-3.png"
+        width: 402
+        height: 136
+        caption: "Text behavior tags"
+        alt: "Dialogue markup controlling texting behaviors"
+    url: "/#left-on-read-dialogue"
+  - id: bloompunk-environment
+    title: "Environment & Lighting"
+    context: "BLOOMPUNK"
+    role: "Art direction, lighting & VFX"
+    year: "2022"
+    stack: ["Unity", "Environment art"]
+    media: "bloompunk-set-dress-1"
+    alt: "BLOOMPUNK environment set dressing and lighting"
+    description: "Led a team of seven 3D artists; set dressed, lit, and authored VFX for the game environment."
+    source: "graphics"
+    anchor: "bloompunk-environment-set-dress--lighting"
+    gallery:
+      - media: "bloompunk-set-dress-2"
+        caption: "Environment lighting"
+        alt: "Environment lighting and set dressing in BLOOMPUNK"
+      - image: "https://cdna.artstation.com/p/assets/images/images/062/971/888/large/sheehan-ahmed-bp-pf-01.jpg?1684380933"
+        caption: "Environment art"
+        alt: "BLOOMPUNK environment art and lighting"
+      - image: "https://cdnb.artstation.com/p/assets/images/images/062/971/889/large/sheehan-ahmed-bp-pf-02.jpg?1684380944"
+        caption: "Set dressing"
+        alt: "BLOOMPUNK environment set dressing"
+    url: "/#bloompunk-environment"
+  - id: spookulele-environment
+    title: "Environment Art"
+    context: "SPOOKULELE"
+    role: "Environment asset creation"
+    year: "2023"
+    stack: ["Unreal Engine", "Modeling", "Sculpting"]
+    image: "/assets/images/portfolio/spookulele-environment.jpg"
+    alt: "French Quarter environment art for SPOOKULELE in Unreal Engine"
+    description: "French Quarter environment work in Unreal, including modeled and sculpted assets and trim sheets."
+    status: "Work in progress"
+    source: "graphics"
+    anchor: "spookulele-environment-art-wip"
+    gallery:
+      - image: "https://cdna.artstation.com/p/assets/images/images/067/322/022/large/sheehan-ahmed-fq-wip-02.jpg?1695101986"
+        caption: "French Quarter environment"
+        alt: "French Quarter environment art in Unreal Engine"
+      - image: "https://cdna.artstation.com/p/assets/images/images/067/322/024/large/sheehan-ahmed-fq-wip-04.jpg?1695101997"
+        caption: "Environment detail"
+        alt: "Environment asset and lighting detail"
+      - image: "https://cdnb.artstation.com/p/assets/images/images/067/322/027/large/sheehan-ahmed-fq-wip-06.jpg?1695102008"
+        caption: "Environment detail"
+        alt: "French Quarter environment art detail"
+      - image: "https://cdna.artstation.com/p/assets/images/images/067/322/028/large/sheehan-ahmed-fq-wip-07.jpg?1695102012"
+        caption: "Environment assets"
+        alt: "Modeled and sculpted environment assets"
+      - image: "https://cdnb.artstation.com/p/assets/images/images/067/322/029/large/sheehan-ahmed-fq-wip-08.jpg?1695102017"
+        caption: "Environment assets"
+        alt: "SPOOKULELE environment asset work"
+    url: "/#spookulele-environment"
+  - id: vango-rig-animation
+    title: "Vango Rig & Animation"
+    context: "SPOOKULELE"
+    role: "Modeling, rigging & animation"
+    year: "2021"
+    stack: ["Blender", "Rigging", "Animation"]
+    media: "spookulele-vango-rig-breakdown"
+    alt: "Vango character rig and animation controls"
+    description: "Modeled, rigged, and animated a shielded ranged enemy, from walk cycles to attack and topple states."
+    source: "graphics"
+    anchor: "spookulele-vango-rig--animation"
+    gallery:
+      - media: "spookulele-vango-walk"
+        caption: "Walk cycle"
+        alt: "Vango enemy walk cycle"
+      - media: "spookulele-vango-shoot"
+        caption: "Prepare to shoot"
+        alt: "Vango enemy preparing to shoot"
+      - media: "spookulele-vango-knock-up"
+        caption: "Knock-up & topple"
+        alt: "Vango enemy knock-up and topple animations"
+    url: "/#vango-rig-animation"

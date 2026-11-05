@@ -25,8 +25,14 @@ timezone: America/Los_Angeles
 include:
   - _pages
 
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
 exclude:
   - README.md
+  - AGENTS.md
   - Gemfile
   - Gemfile.lock
   - vendor
@@ -61,6 +67,12 @@ twitter:
   card: summary_large_image
 
 defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+      sitemap: false
   - scope:
       path: ""
     values:

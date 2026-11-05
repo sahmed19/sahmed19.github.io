@@ -57,6 +57,70 @@
     });
   }
 
+  // A compact jump menu on phones; a persistent project list on desktop.
+  var projectJump = document.querySelector('[data-project-jump]');
+  if (projectJump) {
+    var compactProjects = window.matchMedia('(max-width: 1000px)');
+    var setProjectJump = function () {
+      projectJump.open = !compactProjects.matches;
+      projectJump.querySelector('summary').tabIndex = compactProjects.matches ? 0 : -1;
+    };
+    setProjectJump();
+    compactProjects.addEventListener('change', setProjectJump);
+    var projectLinks = projectJump.querySelectorAll('a[href^="#"]');
+    var projectNav = projectJump.closest('nav');
+    var activeProject = null;
+    var markProject = function (id) {
+      if (id === activeProject) return;
+      activeProject = id;
+      var currentLink = null;
+      projectLinks.forEach(function (link) {
+        if (link.hash === '#' + id) {
+          link.setAttribute('aria-current', 'location');
+          currentLink = link;
+        }
+        else link.removeAttribute('aria-current');
+      });
+      if (currentLink && !compactProjects.matches) {
+        var menuBounds = projectNav.getBoundingClientRect();
+        var linkBounds = currentLink.getBoundingClientRect();
+        if (linkBounds.bottom > menuBounds.bottom) projectNav.scrollTop += linkBounds.bottom - menuBounds.bottom;
+        else if (linkBounds.top < menuBounds.top) projectNav.scrollTop -= menuBounds.top - linkBounds.top;
+      }
+    };
+    if (projectLinks.length) markProject(window.location.hash.slice(1) || projectLinks[0].hash.slice(1));
+    projectJump.addEventListener('click', function (e) {
+      var link = e.target.closest('a');
+      if (!link) return;
+      if (compactProjects.matches) projectJump.open = false;
+      var target = document.getElementById(link.hash.slice(1));
+      if (target) target.focus({ preventScroll: true });
+      markProject(link.hash.slice(1));
+    });
+    // Track the section at the reading position, including reverse scrolling
+    // and short projects that can share the viewport.
+    var projectSections = document.querySelectorAll('[data-project-section]');
+    var projectUpdateQueued = false;
+    var queueProjectUpdate = function () {
+      if (projectUpdateQueued) return;
+      projectUpdateQueued = true;
+      window.requestAnimationFrame(function () {
+        projectUpdateQueued = false;
+        var headerHeight = header ? header.getBoundingClientRect().height : 0;
+        var readingLine = headerHeight + (window.innerHeight - headerHeight) * 0.3;
+        var current = projectSections[0];
+        for (var i = 0; i < projectSections.length; i++) {
+          if (projectSections[i].getBoundingClientRect().top <= readingLine) current = projectSections[i];
+          else break;
+        }
+        if (current) markProject(current.id);
+      });
+    };
+    window.addEventListener('scroll', queueProjectUpdate, { passive: true });
+    window.addEventListener('resize', queueProjectUpdate);
+    queueProjectUpdate();
+  }
+
   // Preview videos: play while on screen, pause when off. Reduced motion shows the poster only.
   var videos = document.querySelectorAll("video[data-autoplay]");
   if (reduceMotion) videos.forEach(function (v) { v.controls = !v.closest("a"); });

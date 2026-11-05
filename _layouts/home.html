@@ -1,58 +1,67 @@
 ---
 layout: default
 ---
-<section class="intro container">
-  <h1 class="intro__title">Technical art &amp; tools.</h1>
-  <ul class="social social--intro">
-    {% for s in site.social %}
-      <li><a href="{{ s.url }}" rel="me noopener" target="_blank">{% include icon.html name=s.icon %}<span>{{ s.label }}</span></a></li>
-    {% endfor %}
-    <li><a href="{{ '/resume/' | relative_url }}">{% include icon.html name='download' %}<span>Resume</span></a></li>
-  </ul>
-</section>
-
-<section class="section container" id="work" aria-labelledby="work-title" tabindex="-1">
-  <h2 class="section__title" id="work-title">Selected work</h2>
-  {% assign spotlight = site.data.projects.spotlight %}
-  <a class="spotlight" href="{{ spotlight.url | relative_url }}" aria-labelledby="spotlight-title">
-    <div class="spotlight__media">
-      {% include media.html name=spotlight.media alt=spotlight.alt %}
-    </div>
-    <div class="spotlight__copy">
-      <h3 class="spotlight__title" id="spotlight-title">{{ spotlight.title }}</h3>
-      <p class="spotlight__description">{{ spotlight.description }}</p>
-      <span class="spotlight__link">View project <span aria-hidden="true">&rarr;</span></span>
-    </div>
-  </a>
-
-  <div class="grid grid--3">
-    {% for p in site.data.projects.featured %}
-      <a class="card" href="{{ p.url | relative_url }}">
-        <div class="card__media">
-          {% include media.html name=p.media alt=p.title dir=p.media_dir %}
-        </div>
-        <h3 class="card__title">{{ p.title }}</h3>
-      </a>
-    {% endfor %}
-  </div>
-
-  <nav class="work-nav" aria-label="Portfolio disciplines">
-    {% for d in site.data.projects.disciplines %}
-      <a class="work-nav__link" href="{{ d.url | relative_url }}">
-        <span class="work-nav__title">{{ d.title }} <span aria-hidden="true">&rarr;</span></span>
-      </a>
-    {% endfor %}
+<h1 class="sr-only">{{ site.title }} — Technical art and tools portfolio</h1>
+<div class="project-browser container">
+  <nav class="project-jump" aria-label="Jump to a project">
+    <details open data-project-jump>
+      <summary>Jump to a project <span aria-hidden="true">+</span></summary>
+      <ol>
+        {% for project in site.data.projects.catalog %}
+          <li><a href="#{{ project.id }}">{{ project.title }}</a></li>
+        {% endfor %}
+      </ol>
+    </details>
   </nav>
-</section>
-
-<section class="section container">
-  <div class="section__head">
-    <h2 class="section__title">Blog posts</h2>
-    <a class="section__link" href="{{ '/posts/' | relative_url }}">View all &rarr;</a>
-  </div>
-  <div class="grid grid--3">
-    {% for post in site.posts limit: 3 %}
-      {% include post-card.html post=post %}
+  <div class="project-sections">
+    {% for project in site.data.projects.catalog %}
+      {% assign project_document = site.projects | where: 'project_id', project.id | first %}
+      {% assign project_body = project_document.content | strip %}
+      <section class="project-section" id="{{ project.id }}" aria-labelledby="title-{{ project.id }}" data-project-section tabindex="-1">
+        <div class="project-feature">
+          <div class="project-feature__media{% if project.portrait %} project-feature__media--portrait{% endif %}{% if project.media_layout == 'stacked' %} project-feature__media--stacked{% endif %}">
+            <figure class="project-feature__lead">
+              <div class="project-feature__frame{% if project.portrait %} project-feature__frame--portrait{% endif %}">
+                {% if project.image %}
+                  <img class="media" src="{{ project.image | relative_url }}" alt="{{ project.alt | escape }}" loading="lazy">
+                {% else %}
+                  {% include media.html name=project.media alt=project.alt %}
+                {% endif %}
+              </div>
+              {% if project.credit %}<figcaption>{{ project.credit }}</figcaption>{% endif %}
+            </figure>
+            {% if project.gallery %}
+              <div class="project-gallery{% if project.gallery.size == 3 %} project-gallery--three{% endif %}">
+                {% for demo in project.gallery %}
+                  <figure>
+                    <div class="project-gallery__frame">
+                      {% if demo.image %}
+                        <img class="media" src="{{ demo.image | relative_url }}" alt="{{ demo.alt | escape }}"{% if demo.width and demo.height %} width="{{ demo.width }}" height="{{ demo.height }}"{% endif %} loading="lazy">
+                      {% else %}
+                        {% include media.html name=demo.media alt=demo.alt %}
+                      {% endif %}
+                    </div>
+                    {% if demo.caption %}<figcaption>{{ demo.caption }}</figcaption>{% endif %}
+                  </figure>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+          <div class="project-feature__copy">
+            <header class="project-section__head">
+              {% if project.context %}<p class="project-section__context">{{ project.context }}</p>{% endif %}
+              <h2 id="title-{{ project.id }}">{{ project.title }}</h2>
+              <p class="project-section__summary">{{ project.description }}</p>
+              <p class="project-section__tools"><strong>{{ project.role }}</strong> · {{ project.stack | join: ' / ' }}{% if project.year %} · {{ project.year }}{% endif %}{% if project.status %} · {{ project.status }}{% endif %}</p>
+            </header>
+            {% if project_body != '' %}
+              <div class="prose project-section__body">
+                {{ project_body }}
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </section>
     {% endfor %}
   </div>
-</section>
+</div>

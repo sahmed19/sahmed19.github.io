@@ -3,7 +3,8 @@
 {%- assign mp4 = '/assets/video/' | append: m | append: '.mp4' -%}
 {%- assign has_video = site.static_files | where: 'path', mp4 | size -%}
 {%- if has_video > 0 -%}
-<video class="media" muted loop playsinline preload="none" data-autoplay
+{%- assign media_dimensions = site.data.videos[m] -%}
+<video class="media"{% if media_dimensions %} width="{{ media_dimensions[0] }}" height="{{ media_dimensions[1] }}"{% endif %} muted loop playsinline preload="none" data-autoplay
        poster="{{ '/assets/video/' | append: m | append: '.jpg' | relative_url }}"
        aria-label="{{ include.alt | escape }}">
   <source src="{{ mp4 | relative_url }}" type="video/mp4">
